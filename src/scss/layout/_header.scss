@@ -1,0 +1,33 @@
+@use '../global/' as var;
+
+.l-header {
+  &__wrapper {
+    // &__title {
+    // }
+  }
+  &__title {
+    &::after {
+    }
+  }
+  .l-header__logo-inner {
+  }
+  .l-header__logo {
+  }
+}
+
+.l-header-nav {
+  .l-header-nav__container {
+  }
+  .l-header-nav__item {
+  }
+  .l-header-nav__link {
+  }
+}
+.l-header-nav {
+  &__container {
+  }
+  &__item {
+  }
+  &__link {
+  }
+}

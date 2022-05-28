@@ -43,3 +43,9 @@ a {
 p:lang(en) {
   text-transform: uppercase;
 }
+
+h1 {
+  font-family: var.$font-base;
+  font-size: var.$base-font-size * 2;
+  font-weight: 700;
+}

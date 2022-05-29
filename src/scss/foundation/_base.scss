@@ -47,5 +47,11 @@ p:lang(en) {
 h1 {
   font-family: var.$font-base;
   font-size: var.$base-font-size * 2;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: var.$font-base;
+  font-size: var.$base-font-size * 1.6;
+  font-weight: 600;
 }

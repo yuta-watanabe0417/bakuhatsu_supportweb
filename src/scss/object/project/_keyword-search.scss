@@ -2,12 +2,46 @@
 
 .p-keyword-search {
 	background: var.$bg-secondary-color;
+	margin-top: 56px;
+	padding: 56px 0;
+	overflow: hidden;
+
+	&__wrapper {}
+
+	&__title {
+		@include var.font-size(26);
+		font-weight: 600;
+		letter-spacing: 0.0145455em;
+		position: relative;
+
+		&:before {
+			content: attr(data-english-title);
+			display: block;
+			@include var.font-size(16);
+			font-weight: 400;
+			letter-spacing: 0.0145455em;
+			color: var.$primary-color;
+			margin-bottom: 13px;
+		}
+
+		&:after {
+			content: '';
+			width: 215px;
+			height: 1px;
+			display: inline-block;
+			background-color: var.$primary-color;
+			position: absolute;
+			left: -20%;
+			top: 71%;
+		}
+	}
+
+	&__subtext {
+		margin-top: 16px;
+	}
 }
 
 .l-main-section {
-	background: var.$secondary-color;
-	height: 418px;
-
 	&::before {
 		content: '';
 		width: 130px;

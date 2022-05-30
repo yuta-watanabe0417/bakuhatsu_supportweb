@@ -1,6 +1,6 @@
-$font-base: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W6', '游ゴシック',
-  'Yu Gothic', '游ゴシック体', 'YuGothic', 'ヒラギノ角ゴ Pro W3', Arial,
-  sans-serif;
+$font-base: 'Hiragino Sans', '游ゴシック',
+	'Yu Gothic', '游ゴシック体', 'YuGothic', Arial,
+	sans-serif;
 // $font-title: 'sofia-pro-soft', sans-serif;
 
 $base-font-size: 16px;
@@ -25,19 +25,14 @@ $max-width-size: 1200px;
 
 // 画面幅
 $breakpoints: (
-  'sm': (
-    min-width: 576px,
-  ),
-  'md': (
-    min-width: 768px,
-  ),
-  'lg': (
-    min-width: 992px,
-  ),
-  'xl': (
-    min-width: 1200px,
-  ),
-  'xxl': (
-    min-width: 1400px,
-  ),
-) !default;
+	'sm': (min-width: 576px,
+	),
+	'md': (min-width: 768px,
+	),
+	'lg': (min-width: 992px,
+	),
+	'xl': (min-width: 1200px,
+	),
+	'xxl': (min-width: 1400px,
+	),
+	) !default;

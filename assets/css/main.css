@@ -159,7 +159,7 @@ html {
   box-sizing: border-box;
   height: 100%;
   text-size-adjust: 100%;
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W6", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", Arial, sans-serif;
+  font-family: "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", Arial, sans-serif;
 }
 
 body {
@@ -168,7 +168,7 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: "pkna";
   background-color: #fff;
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W6", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", Arial, sans-serif;
+  font-family: "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", Arial, sans-serif;
   font-weight: normal;
 }
 body.is-drawerActive {
@@ -184,6 +184,7 @@ img {
 a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 p:lang(en) {
@@ -191,86 +192,76 @@ p:lang(en) {
 }
 
 h1 {
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W6", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", Arial, sans-serif;
+  font-family: "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", Arial, sans-serif;
   font-size: 32px;
   font-weight: 600;
 }
 
 h2 {
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W6", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", Arial, sans-serif;
+  font-family: "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", Arial, sans-serif;
   font-size: 25.6px;
   font-weight: 600;
 }
 
 .l-header {
   width: 100%;
-  height: 104px;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 .l-header__wrapper {
   width: 1200px;
-  position: relative;
   margin-right: auto;
   margin-left: auto;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
 }
-.l-header__title {
-  width: auto;
+.l-header__title-link {
+  display: block;
+  height: 100%;
+}
+.l-header__logo-inner {
+  display: inline-block;
+  height: 100%;
 }
 .l-header__logo {
-  background: url(image.png);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .l-header-nav__container {
   display: flex;
   align-items: center;
-  padding: 0px;
-  gap: 32px;
-  width: 700px;
-  height: 52px;
-  left: calc(50% - 350px + 248.5px);
 }
 .l-header-nav__item {
-  width: 89px;
-  height: 28px;
   display: flex;
   align-items: center;
   text-align: center;
+  margin-right: 26px;
+}
+.l-header-nav__item:nth-last-child(2) {
+  margin-right: 0;
+}
+.l-header-nav__item:last-child {
+  margin-right: 0;
+  margin-left: 32px;
 }
 .l-header-nav__link {
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W6", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", Arial, sans-serif;
   font-weight: 300;
-  font-size: #323232;
-  line-height: 28px;
-  /* text-color */
+  font-size: 18px;
+  font-size: 1.125rem;
   color: #323232;
-  text-decoration: none;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  line-height: 1.2;
 }
 .l-header-nav .c-button {
-  /* btn */
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 18px;
-  gap: 10px;
-  width: 119px;
-  height: 52px;
+  padding: 16px 21px;
   background: #0c3898;
   border-radius: 6px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
   color: #ffffff;
+  font-size: 21px;
+  font-size: 1.3125rem;
 }
 
 .l-main {

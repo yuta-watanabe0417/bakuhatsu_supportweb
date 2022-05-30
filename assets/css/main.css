@@ -203,15 +203,19 @@ h2 {
   font-weight: 600;
 }
 
+.l-wrapper {
+  width: 1200px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .l-header {
   width: 100%;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 .l-header__wrapper {
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -266,13 +270,6 @@ h2 {
 
 .l-main {
   margin-top: 27px;
-}
-.l-main__wrapper {
-  width: 1200px;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  background: #ffffff;
 }
 
 .l-main-section {
@@ -346,6 +343,7 @@ h2 {
   margin-top: 56px;
 }
 .l-page-first__wrapper {
+  background: #ffffff;
   text-align: center;
 }
 

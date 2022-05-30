@@ -1,15 +1,42 @@
 @use '../global/' as var;
 
-.l-main-breadcrumb {
+.l-breadcrumb {
+	&__container {
+		display: flex;
+		align-items: center
+	}
+
 	&__item {
-		display: inline;
+		color: var.$base-text-color;
+		margin-right: 14px;
+		@include var.font-size(16);
+		font-weight: 300;
+
+		&:first-child::before {
+			content: url('/assets/images/home.svg');
+			margin-right: 5px;
+		}
+
+		&::after {
+			content: '>';
+			color: var.$primary-color;
+			margin-left: 14px;
+		}
+
+		&:last-child:after {
+			content: '';
+			margin-left: 0;
+		}
 	}
 
 	&__link {
-		color: var.$base-text-color;
-		text-decoration: none;
-		flex: none;
-		order: 0;
-		flex-grow: 0;
+		@include var.font-size(17);
+		color: var.$primary-color;
+		font-weight: 400;
+
+		&:hover {
+			opacity: .5;
+			text-decoration-line: underline;
+		}
 	}
 }

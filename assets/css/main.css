@@ -159,7 +159,7 @@ html {
   box-sizing: border-box;
   height: 100%;
   text-size-adjust: 100%;
-  font-family: "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", Arial, sans-serif;
+  font-family: "Arial", "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
 }
 
 body {
@@ -168,7 +168,7 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: "pkna";
   background-color: #fff;
-  font-family: "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", Arial, sans-serif;
+  font-family: "Arial", "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
   font-weight: normal;
 }
 body.is-drawerActive {
@@ -192,13 +192,13 @@ p:lang(en) {
 }
 
 h1 {
-  font-family: "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", Arial, sans-serif;
+  font-family: "Arial", "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
   font-size: 32px;
   font-weight: 600;
 }
 
 h2 {
-  font-family: "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", Arial, sans-serif;
+  font-family: "Arial", "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
   font-size: 25.6px;
   font-weight: 600;
 }
@@ -265,9 +265,7 @@ h2 {
 }
 
 .l-main {
-  width: 100%;
-  height: 100%;
-  margin: 18px 16px 0px;
+  margin-top: 27px;
 }
 .l-main__wrapper {
   width: 1200px;
@@ -332,13 +330,37 @@ h2 {
   width: 946px;
   height: 69px;
 }
-.l-main-breadcrumb__item {
-  display: inline;
+.l-breadcrumb__container {
+  display: flex;
+  align-items: center;
 }
-.l-main-breadcrumb__link {
+.l-breadcrumb__item {
   color: #323232;
-  text-decoration: none;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  margin-right: 14px;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.l-breadcrumb__item:first-child::before {
+  content: url("/assets/images/home.svg");
+  margin-right: 5px;
+}
+.l-breadcrumb__item::after {
+  content: ">";
+  color: #0c3898;
+  margin-left: 14px;
+}
+.l-breadcrumb__item:last-child:after {
+  content: "";
+  margin-left: 0;
+}
+.l-breadcrumb__link {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  color: #0c3898;
+  font-weight: 400;
+}
+.l-breadcrumb__link:hover {
+  opacity: 0.5;
+  text-decoration-line: underline;
 }

@@ -14,31 +14,6 @@
 }
 
 
-.l-main-title {
-	height: 104px;
-	margin-top: 18px;
-	text-align: center;
-
-	&__main {
-		position: relative;
-
-		&::after {
-			content: '';
-			width: 110px;
-			height: 1px;
-			display: inline-block;
-			background-color: var.$primary-color;
-			position: absolute;
-			bottom: -10px;
-			left: calc(50% - 55px)
-		}
-	}
-
-	&__sub {
-		position: relative;
-		top: 24px;
-	}
-}
 
 .l-main-section {
 	background: var.$secondary-color;

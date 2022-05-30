@@ -8,73 +8,14 @@
 
 	&__wrapper {}
 
-	&__title {
-		@include var.font-size(26);
-		font-weight: 600;
-		letter-spacing: 0.0145455em;
-		position: relative;
-
-		&:before {
-			content: attr(data-english-title);
-			display: block;
-			@include var.font-size(16);
-			font-weight: 400;
-			letter-spacing: 0.0145455em;
-			color: var.$primary-color;
-			margin-bottom: 13px;
-		}
-
-		&:after {
-			content: '';
-			width: 215px;
-			height: 1px;
-			display: inline-block;
-			background-color: var.$primary-color;
-			position: absolute;
-			left: -20%;
-			top: 71%;
-		}
-	}
-
-	&__subtext {
-		margin-top: 16px;
-	}
 }
 
-.l-main-section {
-	&::before {
-		content: '';
-		width: 130px;
-		height: 1px;
-		display: inline-block;
-		background-color: var.$primary-color;
-		position: absolute;
-		bottom: 380px;
-	}
 
-	&__wrapper {
-		position: relative;
-		width: 929px;
-		margin: auto;
-		padding-top: 34px;
-	}
+// .l-main-search {
+// 	width: 946px;
+// 	height: 69px;
 
-	&__subtitle {
-		position: relative;
-		margin-top: 18px;
-		color: var.$primary-color;
-	}
+// 	&__input {}
 
-	&__explanation {
-		position: relative;
-	}
-}
-
-.l-main-search {
-	width: 946px;
-	height: 69px;
-
-	&__input {}
-
-	&__button {}
-}
+// 	&__button {}
+// }

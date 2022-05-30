@@ -277,17 +277,6 @@ h2 {
   background: #ffffff;
 }
 
-.l-main-breadcrumb__item {
-  display: inline;
-}
-.l-main-breadcrumb__link {
-  color: #323232;
-  text-decoration: none;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
 .l-main-title {
   height: 104px;
   margin-top: 18px;
@@ -342,4 +331,14 @@ h2 {
 .l-main-search {
   width: 946px;
   height: 69px;
+}
+.l-main-breadcrumb__item {
+  display: inline;
+}
+.l-main-breadcrumb__link {
+  color: #323232;
+  text-decoration: none;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }

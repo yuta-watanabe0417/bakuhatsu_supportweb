@@ -191,18 +191,6 @@ p:lang(en) {
   text-transform: uppercase;
 }
 
-h1 {
-  font-family: "Arial", "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
-  font-size: 32px;
-  font-weight: 600;
-}
-
-h2 {
-  font-family: "Arial", "Hiragino Sans", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
-  font-size: 25.6px;
-  font-weight: 600;
-}
-
 .l-wrapper {
   width: 1200px;
   height: 100%;
@@ -313,6 +301,35 @@ h2 {
 .l-page-first__wrapper {
   background: #ffffff;
   text-align: center;
+}
+
+.l-repetition_keywords {
+  margin-top: 20px;
+}
+.l-repetition_keywords__title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.l-repetition_keywords__item {
+  display: inline-block;
+  text-align: center;
+  margin-right: 26px;
+  margin-top: 18px;
+  border: 1px solid #0c3898;
+  border-radius: 50px;
+  padding: 4px 16px;
+  background: #ffffff;
+  width: auto;
+  height: 36px;
+}
+.l-repetition_keywords__link {
+  font-weight: 300;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #0c3898;
+  line-height: 1.5;
 }
 
 .c-page-title {

@@ -303,35 +303,6 @@ p:lang(en) {
   text-align: center;
 }
 
-.l-repetition_keywords {
-  margin-top: 20px;
-}
-.l-repetition_keywords__title {
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 400;
-  margin-top: 20px;
-}
-.l-repetition_keywords__item {
-  display: inline-block;
-  margin-right: 12px;
-  margin-top: 18px;
-  width: auto;
-}
-.l-repetition_keywords__link {
-  text-align: center;
-  padding: 7px 19px;
-  border: 1px solid #0c3898;
-  border-radius: 50px;
-  text-align: center;
-  font-weight: 300;
-  font-size: 16px;
-  font-size: 1rem;
-  color: #0c3898;
-  line-height: 1.5;
-  background: #ffffff;
-}
-
 .l-request {
   margin-top: 61px;
   background: #F7FAFF;
@@ -522,6 +493,35 @@ p:lang(en) {
   display: inline-block;
   vertical-align: middle;
   margin-right: 17px;
+}
+
+.c-repetition_keywords {
+  margin-top: 20px;
+}
+.c-repetition_keywords__title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.c-repetition_keywords__item {
+  display: inline-block;
+  margin-right: 12px;
+  margin-top: 18px;
+  width: auto;
+}
+.c-repetition_keywords__link {
+  text-align: center;
+  padding: 7px 19px;
+  border: 1px solid #0c3898;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #0c3898;
+  line-height: 1.5;
+  background: #ffffff;
 }
 
 .c-category-card {

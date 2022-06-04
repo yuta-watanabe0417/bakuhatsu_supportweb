@@ -1,0 +1,72 @@
+@use '../global/' as var;
+
+.l-footer {
+	width: 100%;
+	background: var.$white;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+	&__wrapper {
+		display: flex;
+		// justify-content: space-between;
+		align-items: center;
+		padding: 61px 0;
+	}
+
+	&__title-link {
+		display: block;
+		height: 100%;
+	}
+
+	&__logo-inner {
+		display: inline-block;
+		height: 100%;
+	}
+
+	&__logo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.l-footer-nav {
+	display: flex;
+	width: 100%;
+	// &:last-child {
+	// 	margin-left: 1083px;
+	// 	margin-top: 73px;
+	// }
+	&__container {
+		height: auto;
+		display: flex;
+  		flex-flow: column wrap;
+		height: 140px;
+	}
+
+	&__item {
+		margin-bottom: 14px;
+		margin-left: 64px;
+
+		&:last-child {
+			margin-left	: 408px;
+			margin-top: 73px;
+		}
+	}
+
+	&__link {
+		font-weight: 300;
+		@include var.font-size(16);
+		color: var.$base-text-color;
+		line-height: 1.2;
+		&:hover {
+			opacity: .5;
+			// text-decoration-line: underline;
+		}
+	}
+	&__button-inner {
+		margin-top: 40px;
+		text-align: center;
+	}
+}
+
+

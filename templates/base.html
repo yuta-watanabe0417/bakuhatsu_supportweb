@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/assets/css/main.css' %}">
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-header__wrapper l-wrapper">
+        <h1 class="l-header__title">
+          <a href="/" class="l-header__title-link">
+            <picture class="l-header__logo-inner">
+              <img
+                src="{% static '/assets/images/logo.png' %}"
+                alt="社名＋ロゴ"
+                class="l-header__logo"
+              />
+            </picture>
+          </a>
+        </h1>
+        <nav class="l-header-nav">
+          <ul class="l-header-nav__container">
+            <li class="l-header-nav__item">
+              <a href="" class="l-header-nav__link">メニュー名</a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="" class="l-header-nav__link">メニュー名</a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="" class="l-header-nav__link">メニュー名</a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="" class="l-header-nav__link">メニュー名</a>
+            </li>
+            <li class="l-header-nav__item">
+              <a class="c-button">ログイン</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="l-main">
+      <div class="l-breadcrumb">
+        <ul class="l-breadcrumb__container l-wrapper">
+          {% block breadcrumb %}{% endblock %}
+        </ul>
+      </div>
+      <section class="l-page-first">
+        <div class="l-page-first__wrapper l-wrapper">
+          <h1 class="c-page-title">{% block page-title %}{% endblock %}</h1>
+          <p class="c-page-title__sub">
+            {% block page-subtitle %}{% endblock %}
+          </p>
+        </div>
+      </section>
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="l-footer">
+      <div class="l-footer__wrapper l-wrapper">
+        <div class="l-footer__container">
+          <div class="l-footer__column">
+            <h1 class="l-footer__title">
+              <a href="/" class="l-footer__title-link">
+                <picture class="l-footer__logo-inner">
+                  <img
+                    src="{% static '/assets/images/logo.png' %}"
+                    alt="社名＋ロゴ"
+                    class="l-footer__logo"
+                  />
+                </picture>
+              </a>
+            </h1>
+          </div>
+          <div class="l-footer__column">
+            <div class="l-footer__item">
+              <a href="" class="l-footer__link">会社概要</a>
+            </div>
+            <div class="l-footer__item">
+              <a href="" class="l-footer__link">プライバシーポリシー</a>
+            </div>
+            <div class="l-footer__item">
+              <a href="" class="l-footer__link">利用規約</a>
+            </div>
+            <div class="l-footer__item">
+              <a href="" class="l-footer__link">メニュー名</a>
+            </div>
+          </div>
+          <div class="l-footer__column">
+            <div class="l-footer__item">
+              <a href="" class="l-footer__link">メニュー名</a>
+            </div>
+            <div class="l-footer__item">
+              <a href="" class="l-footer__link">メニュー名</a>
+            </div>
+            <div class="l-footer__item">
+              <a href="" class="l-footer__link">メニュー名</a>
+            </div>
+            <div class="l-footer__item">
+              <a href="" class="l-footer__link">メニュー名</a>
+            </div>
+          </div>
+          <div class="l-footer__column">
+            <div class="l-footer__button-inner">
+              <a href="" class="c-primary-button--fill">お問い合わせ</a>
+            </div>
+          </div>
+        </div>
+        <div class="l-footer__bottom">
+          <div class="c-copyright">
+            <div class="c-copyright__container">
+              <p class="c-copyright__text">
+                &copy; ERI Inc., All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+@use '../../global/' as var;
+
+.c-faq-detail{
+    &__container{
+        
+    }
+
+    &__quiestion-header{
+        ::before{
+
+        }
+
+        ::after{
+
+        }
+    }
+
+    &__question-text{
+
+    }
+
+    &__answer-header{
+        ::before{
+
+        }
+
+        ::after{
+
+        }
+    }
+
+    &__answer-text{
+
+    }
+}

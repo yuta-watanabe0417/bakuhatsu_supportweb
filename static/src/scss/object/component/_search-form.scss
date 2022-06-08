@@ -1,1 +1,41 @@
 @use '../../global/' as var;
+
+
+.c-search-form {
+	display: flex;
+	align-items: center;
+
+	&__keyword {
+		width: 100%;
+		border-radius: 12px;
+		background: #FFFFFF;
+		padding: 20px 23px;
+
+		&::placeholder {
+			font-size: 20px;
+			color: #C9C9C9;
+		}
+
+		&:focus {
+			border: 2px solid var.$primary-color;
+			outline: 0;
+		}
+	}
+
+	&__submit-inner {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 19px;
+	}
+
+	&__submit {
+		background: var.$primary-color;
+		padding: 10px;
+		border-radius: 12px;
+
+		&:focus {
+			border: 2px solid #ee7c00;
+			outline: 0;
+		}
+	}
+}

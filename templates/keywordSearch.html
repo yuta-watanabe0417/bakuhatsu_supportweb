@@ -1,15 +1,27 @@
+{% load static %}
 <section class="p-keyword-search">
   <div class="p-keyword-search__wrapper l-wrapper">
     <h2 class="c-section-title" data-english-title="SEARCH">キーワード検索</h2>
     <p class="c-section-title__subtext">キーワードで検索ができます。</p>
-    <form action="">
-      <input
-        type="text"
-        class=""
-        placeholder="製品名〇〇〇〇〇〇をご入力ください。"
-      />
-      <input type="submit" class="" />
-    </form>
+    <div class="p-keyword-search__form-inner">
+      <form action="" class="c-search-form">
+        <input
+          type="text"
+          class="c-search-form__keyword"
+          placeholder="製品名〇〇〇〇〇〇をご入力ください。"
+        />
+        <div class="c-search-form__submit-inner">
+          <input
+            class="c-search-form__submit"
+            type="image"
+            src="{% static '/assets/images/search.svg' %}"
+            alt="送信する"
+            width="55"
+            height="55"
+          />
+        </div>
+      </form>
+    </div>
     <div class="c-repetition_keywords">
       <h3 class="c-repetition_keywords__title">よく検索されるキーワード</h3>
       <ul class="repetition_keywords">

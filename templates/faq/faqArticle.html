@@ -1,3 +1,4 @@
+{% load static %}
 <section class="p-faq-detail">
   <div class="p-faq-detail__wrapper l-wrapper">
     <article class="c-faq-article">
@@ -75,9 +76,74 @@
   </div>
 </section>
 <section class="p-faq-request">
-  <div class="p-faq-request__wrapper">
+  <div class="p-faq-request__wrapper l-wrapper">
     <h2 class="c-section-title" data-english-title="FAQ REQUEST">
       質問リクエスト
     </h2>
+    <p class="c-section-title__subtext">
+      テキストが入ります。テキストが入ります。テキストが入ります。
+    </p>
+    <div class="p-faq-request__container">
+      <div class="p-faq-request__title-inner">
+        <h3 class="p-faq-request__title">\質問リクエストを投稿しよう/</h3>
+      </div>
+      <div class="p-faq-request__form-inner">
+        <form action="" class="p-faq-request-form">
+          <div class="p-faq-request-form__items">
+            <label for="" class="p-faq-request-form__text"
+              >リクエスト種別</label
+            >
+            <div class="p-faq-request-form__category-inner">
+              <select
+                name="request_category"
+                id=""
+                class="p-faq-request-form__category"
+              >
+                <option value="" style="display: none">
+                  <span class="p-faq-request-form__arrow">カテゴリー</span>
+                </option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+                <option value="">テキスト</option>
+              </select>
+            </div>
+          </div>
+          <div class="p-faq-request-form__items">
+            <label for="" class="p-faq-request-form__text"
+              >メールアドレス</label
+            >
+            <input
+              class="p-faq-request-form__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="メールアドレスを入力してください。"
+            />
+          </div>
+          <div class="p-faq-request-form__items">
+            <label for="" class="p-faq-request-form__text"
+              >リクエスト内容</label
+            >
+            <textarea
+              class="p-faq-request-form__input-textarea"
+              type="textarea"
+              name="request"
+              id="request"
+              placeholder="質問をご入力してください。"
+              clos="1"
+              rows="15"
+            ></textarea>
+          </div>
+          <div class="p-faq-request-form__items">
+            <button type="submit" class="c-primary-button--fill">
+              リクエストを送信する
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>

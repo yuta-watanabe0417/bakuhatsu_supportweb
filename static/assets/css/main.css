@@ -601,6 +601,16 @@ p:lang(en) {
   margin-left: 10px;
 }
 
+.c-category-tag {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.0145455em;
+  background: #0C3898;
+  padding: 4px 8px;
+  color: #fff;
+  border-radius: 5px;
+}
+
 .c-primary-button {
   font-weight: 500;
   font-size: 21px;

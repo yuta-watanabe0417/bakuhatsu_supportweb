@@ -100,7 +100,7 @@
 		color: #0C3898;
 
 		&::after {
-			content: url("/assets/images/link-arrow.svg");
+			content: url(/static/assets/images/link-arrow.svg);
 			display: inline-block;
 			vertical-align: text-top;
 			margin-left: 10px;

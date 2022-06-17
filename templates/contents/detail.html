@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}コンテンツタイトル{% endblock %}
+{% block breadcrumb %}
+<li class="l-breadcrumb__item">
+  <a href="" class="l-breadcrumb__link">HOME</a>
+</li>
+<li class="l-breadcrumb__item">
+  <a href="" class="l-breadcrumb__link">コンテンツ一覧</a>
+</li>
+<li class="l-breadcrumb__item">
+  コンテンツタイトル
+</li>
+{% endblock %}
+{% block content %}
+{% include 'contents/contentsArticle.html' %}
+{% include 'keywordSearch.html' %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}トップページ{% endblock %}
+{% block breadcrumb %}
+<li class="l-breadcrumb__item">
+  <a href="" class="l-breadcrumb__link">HOME</a>
+</li>
+{% endblock %}
+{% block page-title %}爆発研究所 Suppport Web{% endblock %}
+{% block page-subtitle %}爆発研究所のサービスサポートサイトです。{% endblock %}
+{% block content %}
+{% include 'keywordSearch.html' %}
+{% include 'faq/faqCard.html' %}
+{% include 'faq/faqRequest.html' %}
+{% include 'faq/faqCategory.html' %}
+{% endblock %}

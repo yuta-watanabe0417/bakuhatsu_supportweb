@@ -1,0 +1,11 @@
+@use '../../global/' as var;
+
+.c-copyright {
+	&__container {
+		padding-bottom: 12px;
+	}
+
+	&__text {
+		@include var.font-size(14);
+	}
+}

@@ -1,0 +1,46 @@
+@use '../global/' as var;
+
+*,
+:before,
+:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
+	text-size-adjust: 100%;
+	font-family: var.$font-base;
+}
+
+body {
+	height: 100%;
+	color: var.$base-text-color;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: 'pkna';
+	background-color: #fff;
+	font-family: var.$font-base;
+	font-weight: normal;
+
+	&.is-drawerActive {
+		overflow: hidden;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+a {
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	text-decoration: none;
+}
+
+p:lang(en) {
+	text-transform: uppercase;
+}

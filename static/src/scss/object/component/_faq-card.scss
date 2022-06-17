@@ -1,0 +1,109 @@
+@use '../../global/' as var;
+
+.c-faq-card {
+	background: #FFFFFF;
+	border: 1px solid #D9E7FF;
+	border-radius: 19px;
+	padding: 25px;
+
+	&__top {
+		display: flex;
+	}
+
+	&__title-q {
+		font-size: 38px;
+		color: #C6C6C6;
+		margin-right: 14px;
+	}
+
+	&__title {
+		@include var.font-size(20);
+		font-weight: 600;
+		line-height: 1.5;
+
+		&:before {
+			content: attr(data-faq-title);
+			display: inline;
+
+		}
+	}
+
+	&__title-link {
+		color: var.$base-text-color;
+	}
+
+	&__middle {
+		margin-top: 8px;
+		margin-left: 44px;
+	}
+
+	&__category-tag {
+		font-weight: 300;
+		font-size: 14px;
+		color: #0C3898;
+		border: 1px solid #F7FAFF;
+		background: #F7FAFF;
+		border-radius: 5px;
+		padding: 4px 8px;
+		margin-right: 8px;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 24px;
+		align-items: baseline;
+	}
+
+	&__like-container {}
+
+	&__like-number {
+		font-weight: 700;
+		font-size: 28px;
+		font-family: 'Arial';
+		color: #0C3898;
+	}
+
+	&__like-text {
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		color: var.$base-text-color;
+		margin-right: 18px;
+	}
+
+	&__like {
+		img {
+			width: 89%;
+		}
+	}
+
+	&__infomation-inner {}
+
+	&__rank {
+		font-weight: 300;
+		font-size: 14px;
+		color: var.$base-text-color;
+		margin-right: 10px;
+	}
+
+	&__date {
+		font-weight: 300;
+		font-size: 14px;
+		color: var.$base-text-color;
+		margin-right: 32px;
+	}
+
+	&__link {
+		font-weight: 600;
+		font-size: 14px;
+		color: #0C3898;
+
+		&::after {
+			content: url(/static/assets/images/link-arrow.svg);
+			display: inline-block;
+			vertical-align: text-top;
+			margin-left: 10px;
+		}
+	}
+}

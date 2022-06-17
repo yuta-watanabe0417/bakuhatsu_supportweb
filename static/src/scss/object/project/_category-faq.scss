@@ -1,0 +1,26 @@
+@use '../../global/' as var;
+
+.p-category-faq {
+	margin-top: 56px;
+	padding-top: 31px;
+	background: #F1F5F9;
+
+	&__wrapper {}
+
+	&__container {}
+
+	&__list {
+		margin-top: 12px;
+		padding-top: 36px;
+		padding-bottom: 72px;
+		border-top: 1px solid var.$primary-color;
+	}
+
+	&__column {
+		margin-bottom: 21px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}

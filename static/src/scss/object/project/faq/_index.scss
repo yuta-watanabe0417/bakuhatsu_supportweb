@@ -1,0 +1,6 @@
+// object/project/faq/_index.scss
+@use '../../../global' as var;
+
+
+@forward 'faq-detail';
+@forward 'faq-request';

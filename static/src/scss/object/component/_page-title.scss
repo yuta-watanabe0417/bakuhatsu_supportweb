@@ -1,0 +1,26 @@
+@use '../../global/' as var;
+
+.c-page-title {
+	position: relative;
+	display: inline;
+	@include var.font-size(32);
+	font-weight: 600;
+	letter-spacing: 0.0145455em;
+
+	&::after {
+		content: '';
+		width: 110px;
+		height: 1px;
+		display: inline-block;
+		background-color: var.$primary-color;
+		position: absolute;
+		bottom: -10px;
+		left: calc(50% - 55px)
+	}
+
+	&__sub {
+		margin-top: 29px;
+		font-weight: 300;
+		@include var.font-size(16);
+	}
+}

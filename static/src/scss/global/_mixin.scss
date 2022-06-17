@@ -1,0 +1,14 @@
+@use './variables' as var;
+
+@mixin font-size($size, $base: 16) {
+	font-size: $size + px;
+	font-size: calc($size / $base) + rem;
+}
+
+@mixin mq($breakpoint) {
+	@if map-has-key(var.$breakpoints, $breakpoint) {
+		@media screen and #{inspect(map-get(var.$breakpoints, $breakpoint))} {
+			@content;
+		}
+	}
+}

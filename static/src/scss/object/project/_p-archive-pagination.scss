@@ -1,0 +1,9 @@
+@use '../../global/' as var;
+
+.p-archive-pagination{
+margin-top: 57px;
+	&__wrapper{
+				padding-top: 0.5em;
+					margin-top: 1rem;
+	}
+}

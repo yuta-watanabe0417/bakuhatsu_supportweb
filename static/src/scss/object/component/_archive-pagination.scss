@@ -1,0 +1,63 @@
+// Object
+// object/component/_archive-pagination.scss
+@use '../../global' as var;
+
+.c-archive-pagination {
+	display: flex;
+	justify-content: center;
+
+	&__item {
+		margin-right: 14px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 17px 20px;
+		background: #fff;
+		color: #0C3898;
+		font-weight: 700;
+		font-size: 21px;
+
+		&:hover {
+			color: #0C3898;
+			background-color: #fff;
+			opacity: 0.5;
+		}
+
+		&[aria-current='page'] {
+			color: #fff;
+			background-color: #0C3898;
+			border-radius: 6px;
+		}
+	}
+
+	&__text {
+		font-weight: 600;
+		font-size: 21px;
+		color: #0C3898;
+		position: relative;
+	}
+
+	.previous {
+		&::before {
+			content: url(/static/assets/images/link-arrow.svg);
+			position: absolute;
+			left: -20px;
+			transform: rotate(180deg);
+			top: 3px;
+		}
+	}
+
+	.next {
+		&::after {
+			content: url(/static/assets/images/link-arrow.svg);
+			position: absolute;
+			right: -20px;
+			top: 3px;
+		}
+	}
+}

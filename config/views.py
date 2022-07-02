@@ -25,3 +25,13 @@ class ContentsList(View):
 class ContentsDetail(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'contents/detail.html')
+
+
+class InformationList(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'information/list.html')
+
+
+class InformationDetail(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'information/detail.html')

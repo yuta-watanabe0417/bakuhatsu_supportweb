@@ -1,19 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}よくある質問{% endblock %}
+{% block title %}お知らせ一覧{% endblock %}
 {% block breadcrumb %}
 <li class="l-breadcrumb__item">
   <a href="" class="l-breadcrumb__link">HOME</a>
 </li>
 <li class="l-breadcrumb__item">
-  よくある質問
+  お知らせ一覧
 </li>
 {% endblock %}
-{% block page-title %}よくある質問{% endblock %}
+{% block page-title %}お知らせ一覧{% endblock %}
 {% block page-subtitle %}テキストが入ります。テキストが入ります。テキストが入ります。{% endblock %}
 {% block content %}
-{% include 'keywordSearch.html' %}
-{% include 'faq/faqCard.html' %}
-{% include 'faq/faqRequest.html' %}
-{% include 'faq/faqCategory.html' %}
+{% include 'information/informationCard.html' %}
 {% endblock %}

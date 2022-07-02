@@ -1,2 +1,3 @@
-// object/project/detail/_index.scss
-@use'../../../global/' as var;
+// object/project/information/_index.scss
+
+@forward 'information-detail';

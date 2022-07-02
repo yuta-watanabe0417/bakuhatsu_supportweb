@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}お知らせタイトル{% endblock %}
+{% block breadcrumb %}
+<li class="l-breadcrumb__item">
+  <a href="" class="l-breadcrumb__link">HOME</a>
+</li>
+<li class="l-breadcrumb__item">
+  <a href="" class="l-breadcrumb__link">お知らせ一覧</a>
+</li>
+<li class="l-breadcrumb__item">
+  お知らせタイトル
+</li>
+{% endblock %}
+{% block content %}
+{% include 'information/informationArticle.html' %}
+{% endblock %}

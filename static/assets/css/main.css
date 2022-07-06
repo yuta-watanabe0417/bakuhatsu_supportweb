@@ -682,9 +682,9 @@ p:lang(en) {
 }
 .c-contents-card__bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 24px;
-  align-items: baseline;
+  align-items: center;
 }
 .c-contents-card__like-number {
   font-weight: 700;

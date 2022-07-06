@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}コメント詳細{% endblock %}
+{% block breadcrumb %}
+<li class="l-breadcrumb__item">
+  <a href="" class="l-breadcrumb__link">HOME</a>
+</li>
+<li class="l-breadcrumb__item">
+  <a href="" class="l-breadcrumb__link">記事タイトル</a>
+</li>
+<li class="l-breadcrumb__item">
+  コメントタイトル
+</li>
+{% endblock %}
+{% block content %}
+{% include 'contents/comment/commentArticle.html' %}
+<!-- {% include 'keywordSearch.html' %} -->
+{% endblock %}

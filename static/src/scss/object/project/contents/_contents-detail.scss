@@ -16,6 +16,11 @@
 		padding: 48px 103px;
 		box-shadow: 0px 0px 10px #D9E7FF;
 	}
+		&__wrapper--no-shadow {
+			background: #fff;
+			border-radius: 19px;
+			padding: 48px 103px;
+		}
 
 	&__top {}
 

@@ -13,6 +13,10 @@
 </li>
 {% endblock %}
 {% block content %}
-{% include 'contents/comment/commentArticle.html' %}
+<section class="p-contents-detail">
+  <div class="p-contents-detail__wrapper l-wrapper">
+{% include 'contents/comment/commentArticle.html' %} 
+  </div>
+</section>
 <!-- {% include 'keywordSearch.html' %} -->
 {% endblock %}

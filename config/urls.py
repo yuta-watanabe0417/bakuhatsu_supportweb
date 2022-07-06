@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import TopPage, FaqList, FaqDetail, ContentsList, ContentsDetail, InformationList, InformationDetail
+from .views import TopPage, FaqList, FaqDetail, ContentsList, ContentsDetail, InformationList, InformationDetail, CommentDetail
 
 urlpatterns = [
    path('admin/', admin.site.urls),
@@ -11,6 +11,7 @@ urlpatterns = [
    path('faq/detail', FaqDetail.as_view(), name='faq/detail'),
    path('contents/list', ContentsList.as_view(), name='contents/list'),
    path('contents/detail', ContentsDetail.as_view(), name='contents/detail'),
+   path('contents/comment/detail', CommentDetail.as_view(), name='contents/comment/detail'),
    path('information/list', InformationList.as_view(), name='information/list'),
    path('information/detail', InformationDetail.as_view(), name='information/detail'),
    # path('blog/', include('blogs.urls')),

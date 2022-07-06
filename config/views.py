@@ -35,3 +35,8 @@ class InformationList(View):
 class InformationDetail(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'information/detail.html')
+
+
+class CommentDetail(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'contents/comment/detail.html')

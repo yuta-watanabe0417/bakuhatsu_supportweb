@@ -49,6 +49,7 @@
           {% block breadcrumb %}{% endblock %}
         </ul>
       </div>
+      {% if "detail" not in request.get_full_path %}
       <section class="l-page-first">
         <div class="l-page-first__wrapper l-wrapper">
           <h1 class="c-page-title">{% block page-title %}{% endblock %}</h1>
@@ -57,6 +58,7 @@
           </p>
         </div>
       </section>
+      {% endif %}
       {% block content %}{% endblock %}
     </main>
     <footer class="l-footer">

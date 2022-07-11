@@ -1,10 +1,10 @@
 @use '../global/' as var;
 
 .l-page-first {
-	margin-top: 56px;
+  margin-top: 56px;
 
-	&__wrapper {
-		background: var.$white;
-		text-align: center;
-	}
+  &__wrapper {
+    text-align: center;
+    background: var.$white;
+  }
 }

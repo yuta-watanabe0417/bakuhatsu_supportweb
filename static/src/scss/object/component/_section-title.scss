@@ -1,34 +1,35 @@
 @use '../../global' as var;
 
 .c-section-title {
-	@include var.font-size(26);
-	font-weight: 600;
-	letter-spacing: 0.0145455em;
-	position: relative;
-	margin-top: 21px;
+  @include var.font-size(26);
 
-	&:before {
-		content: attr(data-english-title);
-		display: block;
-		@include var.font-size(16);
-		font-weight: 400;
-		letter-spacing: 0.0145455em;
-		color: var.$primary-color;
-		margin-bottom: 13px;
-	}
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.0145455em;
 
-	&:after {
-		content: '';
-		width: 215px;
-		height: 1px;
-		display: inline-block;
-		background-color: var.$primary-color;
-		position: absolute;
-		left: -23%;
-		top: 71%;
-	}
+  &::before {
+    display: block;
+    margin-bottom: 13px;
+    font-weight: 400;
+    color: var.$primary-color;
+    letter-spacing: 0.0145455em;
+    content: attr(data-english-title);
 
-	&__subtext {
-		margin-top: 16px;
-	}
+    @include var.font-size(16);
+  }
+
+  &::after {
+    position: absolute;
+    top: 71%;
+	left: -73%;
+    display: inline-block;
+width: 715px;
+    height: 1px;
+    content: '';
+    background-color: var.$primary-color;
+  }
+
+  &__subtext {
+    margin-top: 16px;
+  }
 }

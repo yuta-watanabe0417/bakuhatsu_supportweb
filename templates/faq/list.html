@@ -12,8 +12,9 @@
 {% block page-title %}よくある質問{% endblock %}
 {% block page-subtitle %}テキストが入ります。テキストが入ります。テキストが入ります。{% endblock %}
 {% block content %}
-{% include 'keywordSearch.html' %}
-{% include 'faq/faqCard.html' %}
-{% include 'faq/faqRequest.html' %}
-{% include 'faq/faqCategory.html' %}
+<div class="l-section">
+	{% include 'faq/faqCardList.html' %}
+	{% include 'faq/faqCard.html' %}
+		{% include 'search-category.html' %}
+</div>
 {% endblock %}

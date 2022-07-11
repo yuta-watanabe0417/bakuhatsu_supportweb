@@ -1,42 +1,32 @@
 $font-base: 'Arial', 'Hiragino Sans', '游ゴシック',
-	'Yu Gothic', '游ゴシック体', 'YuGothic',
-	sans-serif;
+  'Yu Gothic', '游ゴシック体', 'YuGothic',
+  sans-serif;
+
 // $font-title: 'sofia-pro-soft', sans-serif;
 
 $base-font-size: 16px;
-
 $primary-color: #0c3898;
-
-$secondary-color: rgba(12, 56, 152, 0.05);
-
+$secondary-color: rgb(12 56 152 / 5%);
 $base-text-color: #323232;
-
 $placeholder-text-color: #c9c9c9;
-
-$white: #ffffff;
-
+$white: #fff;
 $bg-light-color: #f7faff;
-
-$bg-secondary-color: #F1F5F9;
-
+$bg-secondary-color: #f1f5f9;
 $answer-primary-color: #f38a72;
-
 $answer-secondary-color: #fef8f7;
-
-$cotegory-border-color: linear-gradient(to right bottom, #000000, #C4C4C4);
-
+$cotegory-border-color: linear-gradient(to right bottom, #000, #c4c4c4);
 $max-width-size: 1200px;
 
 // 画面幅
 $breakpoints: (
-	'sm': (min-width: 576px,
-	),
-	'md': (min-width: 768px,
-	),
-	'lg': (min-width: 992px,
-	),
-	'xl': (min-width: 1200px,
-	),
-	'xxl': (min-width: 1400px,
-	),
-	) !default;
+  'sm': (min-width: 576px,
+),
+'md': (min-width: 768px,
+),
+'lg': (min-width: 992px,
+),
+'xl': (min-width: 1200px,
+),
+'xxl': (min-width: 1400px,
+),
+) !default;

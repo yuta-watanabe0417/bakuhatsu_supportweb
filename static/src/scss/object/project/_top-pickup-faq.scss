@@ -1,35 +1,23 @@
 @use '../../global' as var;
 
 .p-pickup-faq {
-	margin-top: 22px;
+	padding-top: 28px;
 
-	&__wrapper {}
-	&__background{
-				background: #F7FAFF;
-					width: 100vw;
-					margin-left: calc(50% - 50vw);
-					margin-right: calc(50% - 50vw);
-	}
-	&__container {
-		margin-top: 21px;
-		padding: 36px 12px;
-		border-top: 1px solid var.$primary-color;
-			width: 1200px;
-				height: 100%;
-				margin-left: auto;
-				margin-right: auto;
-	}
+  &__background {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    background: #f7faff;
+  }
 
-	&__column {
-		margin-bottom: 21px;
+  &__container {
+    width: 1200px;
+    height: 100%;
+    margin-top: 21px;
+    margin-right: auto;
+    margin-left: auto;
+    border-top: 1px solid var.$primary-color;
+		padding-bottom: 60px;
+  }
 
-		&:last-child {
-			margin-bottom: 0px;
-		}
-	}
-
-	&__button-inner {
-		margin-top: 61px;
-		text-align: center;
-	}
 }

@@ -1,21 +1,22 @@
-<section class="p-category-faq">
-  <div class="p-category-faq__wrapper l-wrapper">
-    <div class="p-category-faq__container l-container">
+{% load static %}
+<section class="p-search-category">
+  <div class="p-search-category__wrapper l-wrapper">
+    <div class="p-search-category__container l-container">
       <h2 class="c-section-title" data-english-title="CATEGORY">
-        Q&Aカテゴリー
+        カテゴリーから探す
       </h2>
       <p class="c-section-title__subtext">
         テキストが入ります。テキストが入ります。テキストが入ります。
       </p>
-			<nav class="p-category-faq__tab-navigation">
-				<ul class="p-category-faq__tab-container">
-					<li class="p-category-faq__tab-item is-active">FAQ</li>
-					<li class="p-category-faq__tab-item">コンテンツ</li>
+			<nav class="c-tab-navigation">
+				<ul class="c-tab-navigation__container">
+					<li class="c-tab-navigation__item is-active" data-tab="01">FAQ</li>
+					<li class="c-tab-navigation__item" data-tab="02">コンテンツ</li>
 				</ul>
-			</nav>
-      <div class="p-category-faq__list">
-				<div class="p-category-faq__tab-panel is-show">
-					<div class="c-category-card">
+				<div class="c-tab-navigation__contents">
+					<div class="c-tab-navigation__tab-panel is-show"data-content="01">
+						<div class="p-contents-list__column">
+							<div class="c-category-card ">
           <div class="c-category-card__wrapper">
             <div class="c-category-card__firstlayer">
               <h3 class="c-category-card__title">
@@ -89,8 +90,10 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="c-category-card">
+						</div>
+						</div>
+						<div class="p-contents-list__column">
+							<div class="c-category-card ">
           <div class="c-category-card__wrapper">
             <div class="c-category-card__firstlayer">
               <h3 class="c-category-card__title">
@@ -164,8 +167,10 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="c-category-card">
+						</div>
+						</div>
+						<div class="p-contents-list__column">
+							<div class="c-category-card ">
           <div class="c-category-card__wrapper">
             <div class="c-category-card__firstlayer">
               <h3 class="c-category-card__title">
@@ -239,8 +244,10 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="c-category-card">
+						</div>
+						</div>
+						<div class="p-contents-list__column">
+							<div class="c-category-card ">
           <div class="c-category-card__wrapper">
             <div class="c-category-card__firstlayer">
               <h3 class="c-category-card__title">
@@ -314,8 +321,10 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="c-category-card">
+						</div>
+						</div>
+						<div class="p-contents-list__column">
+							<div class="c-category-card ">
           <div class="c-category-card__wrapper">
             <div class="c-category-card__firstlayer">
               <h3 class="c-category-card__title">
@@ -389,8 +398,10 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="c-category-card">
+						</div>
+						</div>
+						<div class="p-contents-list__column">
+							<div class="c-category-card ">
           <div class="c-category-card__wrapper">
             <div class="c-category-card__firstlayer">
               <h3 class="c-category-card__title">
@@ -464,12 +475,18 @@
               </ul>
             </div>
           </div>
-        </div>
+						</div>
+						</div>
+						</div>
+					</div>
+					<div class="c-tab-navigation__tab-panel"data-content="02">
+							<p>コンテンツたぶ🙆‍♂️</p>
+					</div>
+			</div>
+
 				</div>
-				<div class="p-category-faq__tab-panel">
-					<p>コンテンツたぶ🙆‍♂️</p>
-				</div>
-      </div>
+    
+		</nav>
     </div>
   </div>
 </section>

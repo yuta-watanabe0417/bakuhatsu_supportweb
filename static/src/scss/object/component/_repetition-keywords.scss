@@ -1,38 +1,39 @@
 @use '../../global/' as var;
 
 .c-repetition_keywords {
-	margin-top: 20px;
+  margin-top: 20px;
 
-	&__title {
-		@include var.font-size(18);
-		font-weight: 400;
-		margin-top: 20px;
-	}
+  &__title {
+    @include var.font-size(18);
 
-	&__item {
-		display: inline-block;
+    margin-top: 20px;
+    font-weight: 400;
+  }
 
-		margin-right: 12px;
-		margin-top: 18px;
+  &__item {
+    display: inline-block;
+    width: auto;
+    margin-top: 18px;
+    margin-right: 12px;
+  }
 
-		width: auto;
-	}
+  &__link {
+    padding: 7px 19px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var.$primary-color;
+    text-align: center;
+    text-align: center;
+    background: var.$white;
+    border: 1px solid var.$primary-color;
+    border-radius: 50px;
 
-	&__link {
-		text-align: center;
-		padding: 7px 19px;
-		border: 1px solid var.$primary-color;
-		border-radius: 50px;
-		text-align: center;
-		font-weight: 300;
-		@include var.font-size(16);
-		color: var.$primary-color;
-		line-height: 1.5;
-		background: var.$white;
-		&::before {
-			content: attr(data-hash);
-			display: inline-block;
-			margin-right: 5px;
-		}
-	}
+    @include var.font-size(16);
+
+    &::before {
+      display: inline-block;
+      margin-right: 5px;
+      content: attr(data-hash);
+    }
+  }
 }

@@ -1,17 +1,24 @@
 {% load static %}
 <section class="p-contents-list">
   <div class="p-contents-list__wrapper l-wrapper">
-    <div class="p-contents-list__container l-container">
-			<h2 class="c-section-title" data-english-title="PICKUP FAQ">
-      注目のQ＆A
+		<div class="p-contents-list__container l-container">
+			 <h2 class="c-section-title" data-english-title="NEW CONTENTS">
+      最新のコンテンツ
     </h2>
     <p class="c-section-title__subtext">
       テキストが入ります。テキストが入ります。テキストが入ります。
     </p>
-       <div class="p-contents-list__column ">
+		<nav class="c-tab-navigation">
+				<ul class="c-tab-navigation__container">
+					<li class="c-tab-navigation__item is-active" data-tab="01">FAQ</li>
+					<li class="c-tab-navigation__item" data-tab="02">コンテンツ</li>
+				</ul>
+				<div class="c-tab-navigation__contents">
+					<div class="c-tab-navigation__tab-panel is-show"data-content="01">
+				<div class="p-contents-list__column ">
         <article class="c-post-card">
           <div class="c-post-card__top">
-            <span class="c-category-tag">FAQ</span>
+            <span class="c-category-tag">Tutorial</span>
               <span class="c-post-card__rank">会員種別：テキスト？</span>
               <time datetime="" class="c-post-card__date">2022/05/06</time>
           </div>
@@ -36,10 +43,10 @@
           </div>
         </article>
       </div>
-			 <div class="p-contents-list__column ">
+			  <div class="p-contents-list__column ">
         <article class="c-post-card">
           <div class="c-post-card__top">
-            <span class="c-category-tag">FAQ</span>
+            <span class="c-category-tag">Tutorial</span>
               <span class="c-post-card__rank">会員種別：テキスト？</span>
               <time datetime="" class="c-post-card__date">2022/05/06</time>
           </div>
@@ -64,9 +71,16 @@
           </div>
         </article>
       </div>
-        <div class="p-contents-list__button-inner">
+			</div>
+			<div class="c-tab-navigation__tab-panel"data-content="02">
+				<p>コンテンツたぶ🙆‍♂️</p>
+			</div>
+				</div>
+      
+      <div class="p-contents-list__button-inner">
         <a href="" class="c-primary-button">もっと見る</a>
       </div>
-    </div>
+		</nav>
+		</div>
   </div>
 </section>

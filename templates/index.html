@@ -9,8 +9,10 @@
 {% block page-title %}爆発研究所 Suppport Web{% endblock %}
 {% block page-subtitle %}爆発研究所のサービスサポートサイトです。{% endblock %}
 {% block content %}
-{% include 'information.html' %}
-{% include 'faq/faqCard.html' %}
-{% include 'faq/faqRequest.html' %}
-{% include 'faq/faqCategory.html' %}
+<div class="l-section">
+	{% include 'information.html' %}
+	{% include 'contents.html' %}
+<!-- {% include 'faq/faqRequest.html' %} -->
+	{% include 'search-category.html' %}
+</div>
 {% endblock %}

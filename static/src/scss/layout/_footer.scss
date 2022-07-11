@@ -1,70 +1,72 @@
 @use '../global/' as var;
 
 .l-footer {
-	width: 100%;
-	background: var.$white;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  background: var.$white;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 5%);
 
-	&__wrapper {
-		padding-top: 29px;
-	}
+  &__wrapper {
+    padding-top: 29px;
+  }
 
-	&__container {
-		display: flex;
-		width: 100%;
-	}
+  &__container {
+    display: flex;
+    width: 100%;
+  }
 
-	&__title-link {
-		display: block;
-		height: 100%;
-	}
+  &__title-link {
+    display: block;
+    height: 100%;
+  }
 
-	&__logo-inner {
-		display: inline-block;
-		height: 100%;
-	}
+  &__logo-inner {
+    display: inline-block;
+    height: 100%;
+  }
 
-	&__logo {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-	&__column {
-		margin-right: 25px;
+  &__column {
+    margin-right: 25px;
 
-		&:first-child {
-			margin-right: 64px;
-		}
+    &:first-child {
+      margin-right: 64px;
+    }
 
-		&:last-child {
-			margin-left: auto;
-			margin-top: 69px;
-		}
-	}
+    &:last-child {
+      margin-top: 69px;
+      margin-left: auto;
+    }
+  }
 
-	&__item {
-		margin-bottom: 14px;
-	}
+  &__item {
+    margin-bottom: 14px;
+  }
 
-	&__link {
-		font-weight: 300;
-		@include var.font-size(16);
-		color: var.$base-text-color;
-		line-height: 1.2;
-		letter-spacing: 0.0145455em;
+  &__link {
+    font-weight: 300;
+    line-height: 1.2;
+    color: var.$base-text-color;
+    letter-spacing: 0.0145455em;
 
-		&:hover {
-			opacity: .5;
-			// text-decoration-line: underline;
-		}
-	}
+    @include var.font-size(16);
 
-	&__button-inner {
-		text-align: center;
-	}
+    &:hover {
+      opacity: 0.5;
 
-	&__bottom {
-		margin-top: 43px;
-	}
+      // text-decoration-line: underline;
+    }
+  }
+
+  &__button-inner {
+    text-align: center;
+  }
+
+  &__bottom {
+    margin-top: 43px;
+  }
 }

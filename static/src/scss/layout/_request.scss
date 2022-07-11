@@ -1,30 +1,30 @@
 @use '../global/' as var;
 
 .l-request {
-	margin-top: 61px;
-	background: #F7FAFF;
+  margin-top: 61px;
+  background: #f7faff;
 
-	&__wrapper {
-		padding-top: 100px;
-		padding-bottom: 100px;
-	}
+  &__wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
-	&__container {
-		background: #fff;
-		border-radius: 16px;
-		padding-top: 59px;
-		padding-bottom: 79px;
-	}
+  &__container {
+    padding-top: 59px;
+    padding-bottom: 79px;
+    background: #fff;
+    border-radius: 16px;
+  }
 
-	&__text {
-		font-weight: 500;
-		font-size: 20px;
-		color: #0C3898;
-		text-align: center;
-	}
+  &__text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #0c3898;
+    text-align: center;
+  }
 
-	&__button-inner {
-		margin-top: 40px;
-		text-align: center;
-	}
+  &__button-inner {
+    margin-top: 40px;
+    text-align: center;
+  }
 }

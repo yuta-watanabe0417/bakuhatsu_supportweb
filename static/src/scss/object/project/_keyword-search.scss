@@ -1,18 +1,17 @@
 @use '../../global/' as var;
 
 .p-keyword-search {
-	background: var.$bg-secondary-color;
-	margin-top: 56px;
-	padding: 56px 0;
-	overflow: hidden;
+  padding: 56px 0;
+  margin-top: 56px;
+  overflow: hidden;
+  background: var.$bg-secondary-color;
 
-	&__wrapper {}
+  &__wrapper {}
 
-	&__form-inner {
-		margin-top: 16px;
-	}
+  &__form-inner {
+    margin-top: 16px;
+  }
 }
-
 
 // .l-main-search {
 // 	width: 946px;

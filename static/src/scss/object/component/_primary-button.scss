@@ -1,27 +1,28 @@
 @use '../../global/' as var;
 
 .c-primary-button {
-	font-weight: 500;
-	font-size: 21px;
-	padding: 12px 60px;
-	background: #FFFFFF;
-	border: 1px solid #0C3898;
-	border-radius: 6px;
-	color: #0C3898;
-	display: inline-block;
-	&--fill {
-		background: #0C3898;
-		color: #fff;
-		font-weight: 600;
-		font-size: 21px;
-		padding: 20px 45px;
-		border-radius: 6px;
+  display: inline-block;
+  padding: 12px 60px;
+  font-size: 21px;
+  font-weight: 500;
+  color: #0c3898;
+  background: #fff;
+  border: 1px solid #0c3898;
+  border-radius: 6px;
 
-		&:before {
-			content: url(/static/assets/images/mail.svg);
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 17px;
-		}
-	}
+  &--fill {
+    padding: 20px 45px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #fff;
+    background: #0c3898;
+    border-radius: 6px;
+
+    &::before {
+      display: inline-block;
+      margin-right: 17px;
+      vertical-align: middle;
+      content: url(/static/assets/images/mail.svg);
+    }
+  }
 }

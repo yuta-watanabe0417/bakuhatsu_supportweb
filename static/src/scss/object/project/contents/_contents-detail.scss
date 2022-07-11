@@ -1,192 +1,191 @@
 @use '../../../global/' as var;
 
 .p-contents-detail {
-	margin-top: 29px;
-	background: #F7FAFF;
-	padding-top: 56px;
-	padding-bottom: 56px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  margin-top: 29px;
+  background: #f7faff;
 
-	&__wrapper {}
-
+  &__wrapper {}
 }
 
 .c-contents-article {
-	&__wrapper {
-		background: #fff;
-		border-radius: 19px;
-		padding: 48px 103px;
-		box-shadow: 0px 0px 10px #D9E7FF;
-	}
-		&__wrapper--no-shadow {
-			background: #fff;
-			border-radius: 19px;
-			padding: 48px 103px;
-		}
+  &__wrapper {
+    padding: 48px 103px;
+    background: #fff;
+    border-radius: 19px;
+    box-shadow: 0 0 10px #d9e7ff;
+  }
 
-	&__top {}
+  &__wrapper--no-shadow {
+    padding: 48px 103px;
+    background: #fff;
+    border-radius: 19px;
+  }
 
-	&__information-inner {
-		display: flex;
-		align-items: center;
-	}
+  &__top {}
 
-	&__rank {
-		font-weight: 300;
-		font-size: 14px;
-		letter-spacing: 0.0145455em;
-		color: #323232;
-		margin-right: 10px;
-	}
+  &__information-inner {
+    display: flex;
+    align-items: center;
+  }
 
-	&__date {
-		font-weight: 300;
-		font-size: 14px;
-		letter-spacing: 0.0145455em;
-		color: #323232;
-		margin-right: 10px;
-	}
+  &__rank {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #323232;
+    letter-spacing: 0.0145455em;
+  }
 
-	&__category-inner {
-		display: flex;
-		align-items: center;
-	}
+  &__date {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #323232;
+    letter-spacing: 0.0145455em;
+  }
 
-	&__category-tag {
-		background: #F7FAFF;
-		border: 1px solid #F7FAFF;
-		border-radius: 5px;
-		font-weight: 300;
-		font-size: 14px;
-		letter-spacing: 0.0145455em;
-		color: #0C3898;
-		padding: 4px 8px;
-		margin-right: 16px;
-	}
+  &__category-inner {
+    display: flex;
+    align-items: center;
+  }
 
-	&__middle {
-		margin-top: 8px;
-	}
+  &__category-tag {
+    padding: 4px 8px;
+    margin-right: 16px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #0c3898;
+    letter-spacing: 0.0145455em;
+    background: #f7faff;
+    border: 1px solid #f7faff;
+    border-radius: 5px;
+  }
 
-	&__question-inner {}
+  &__middle {
+    margin-top: 8px;
+  }
 
-	&__subtitle-question-inner {
-		padding-bottom: .5rem;
-		border-bottom: 1px solid #0C3898;
+  &__question-inner {}
 
-		&:after {
-			content: attr(data-english-title);
-			font-weight: 700;
-			font-size: 70px;
-			color: rgba(12, 56, 152, 0.05);
-		}
-	}
+  &__subtitle-question-inner {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #0c3898;
 
-	&__subtitle-answer-inner {
-		padding-bottom: .5rem;
+    &::after {
+      font-size: 70px;
+      font-weight: 700;
+      color: rgb(12 56 152 / 5%);
+      content: attr(data-english-title);
+    }
+  }
 
-		&:after {
-			content: attr(data-english-title);
-			font-weight: 700;
-			font-size: 70px;
-			color: #FEF8F7;
-		}
-	}
+  &__subtitle-answer-inner {
+    padding-bottom: 0.5rem;
 
-	&__subtitle {
-		display: inline;
-		font-weight: 600;
-		font-size: 20px;
-		border-radius: 5px;
-		padding: 4px 8px;
-		color: #fff;
+    &::after {
+      font-size: 70px;
+      font-weight: 700;
+      color: #fef8f7;
+      content: attr(data-english-title);
+    }
+  }
 
-		&-question {
-			background: #0C3898;
-		}
+  &__subtitle {
+    display: inline;
+    padding: 4px 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
 
-		&-answer {
-			background: #F1795E;
+    &-question {
+      background: #0c3898;
+    }
 
-		}
-	}
+    &-answer {
+      background: #f1795e;
+    }
+  }
 
-	&__title-inner {
-		margin-top: 23px;
-		padding-bottom: 16px;
-		border-bottom: 1px solid #0C3898;
-	}
+  &__title-inner {
+    padding-bottom: 16px;
+    margin-top: 23px;
+    border-bottom: 1px solid #0c3898;
+  }
 
-	&__title {
-		font-weight: 600;
-		font-size: 26px;
-		color: #0C3898;
-		letter-spacing: 0.0145455em;
-		line-height: 1.3;
-	}
+  &__title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #0c3898;
+    letter-spacing: 0.0145455em;
+  }
 
-	&__bottom {
-		margin-top: 8px;
-	}
+  &__bottom {
+    margin-top: 8px;
+  }
 
-	&__answer-inner {}
+  &__answer-inner {}
 
-	&__answer {
-		background: #FEF8F7;
-		border-radius: 19px;
-		padding: 21px 27px;
+  &__answer {
+    padding: 21px 27px;
+    background: #fef8f7;
+    border-radius: 19px;
 
-		p {
-			font-weight: 300;
-			font-size: 24px;
-			line-height: 1.2;
-			color: #323232;
-		}
-	}
+    p {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: #323232;
+    }
+  }
 
-	&__like-container {
-		margin-top: 48px;
-		display: flex;
-		justify-content: center;
-	}
+  &__like-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+  }
 
-	&__button-inner {
-		margin-right: 58px;
-		text-align: center;
-	}
+  &__button-inner {
+    margin-right: 58px;
+    text-align: center;
+  }
 
-	&__button {
-		display: block;
-		border-radius: 50px;
-		box-shadow: 0px 0px 10px #D9E7FF;
-		width: 85px;
-		height: 85px;
-		background: #FFFFFF;
-		position: relative;
-		margin-bottom: 12px;
-		margin-right: auto;
-		margin-left: auto;
-	}
+  &__button {
+    position: relative;
+    display: block;
+    width: 85px;
+    height: 85px;
+    margin-right: auto;
+    margin-bottom: 12px;
+    margin-left: auto;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #d9e7ff;
+  }
 
-	&__button-text {
-		font-weight: 600;
-		font-size: 14px;
-		color: #323232;
-	}
+  &__button-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #323232;
+  }
 
-	&__like-number {
-		position: absolute;
-		font-weight: 700;
-		font-size: 31px;
-		color: #0c3898;
-		top: 34%;
-		left: 19%;
-	}
+  &__like-number {
+    position: absolute;
+    top: 34%;
+    left: 19%;
+    font-size: 31px;
+    font-weight: 700;
+    color: #0c3898;
+  }
 
-	&__good-icon {
-		content: url(/static/assets/images/good.svg);
-	}
+  &__good-icon {
+    content: url(/static/assets/images/good.svg);
+  }
 
-	&__bookmark-icon {
-		content: url(/static/assets/images/bookmark-pin.svg);
-	}
+  &__bookmark-icon {
+    content: url(/static/assets/images/bookmark-pin.svg);
+  }
 }

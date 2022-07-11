@@ -12,5 +12,9 @@
 {% block page-title %}お知らせ一覧{% endblock %}
 {% block page-subtitle %}テキストが入ります。テキストが入ります。テキストが入ります。{% endblock %}
 {% block content %}
-{% include 'information/informationCard.html' %}
+<div class="l-section">
+	{% include 'information/informationCard.html' %}
+		{% include 'faq/faqCard.html' %}
+		{% include 'search-category.html' %}
+</div>
 {% endblock %}

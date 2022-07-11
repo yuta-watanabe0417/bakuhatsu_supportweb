@@ -1,42 +1,41 @@
 @use '../../global/' as var;
 
-
 .c-search-form {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 
-	&__keyword {
-		width: 100%;
-		border-radius: 12px;
-		background: #FFFFFF;
-		padding: 20px;
-		border: 2px solid transparent;
+  &__keyword {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 12px;
 
-		&::placeholder {
-			font-size: 20px;
-			color: #C9C9C9;
-		}
+    &::placeholder {
+      font-size: 20px;
+      color: #c9c9c9;
+    }
 
-		&:focus {
-			border: 2px solid var.$primary-color;
-			outline: 0;
-		}
-	}
+    &:focus {
+      border: 2px solid var.$primary-color;
+      outline: 0;
+    }
+  }
 
-	&__submit-inner {
-		display: inline-block;
-		vertical-align: middle;
-		margin-left: 19px;
-	}
+  &__submit-inner {
+    display: inline-block;
+    margin-left: 19px;
+    vertical-align: middle;
+  }
 
-	&__submit {
-		background: var.$primary-color;
-		padding: 10px;
-		border-radius: 12px;
+  &__submit {
+    padding: 10px;
+    background: var.$primary-color;
+    border-radius: 12px;
 
-		&:focus {
-			border: 2px solid #ee7c00;
-			outline: 0;
-		}
-	}
+    &:focus {
+      border: 2px solid #ee7c00;
+      outline: 0;
+    }
+  }
 }

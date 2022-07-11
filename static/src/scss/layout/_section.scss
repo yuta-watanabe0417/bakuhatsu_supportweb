@@ -1,0 +1,8 @@
+@use '../global/' as var;
+
+.l-section{
+	margin-top: 56px;
+	section:nth-of-type(odd){
+		background-color: var.$bg-secondary-color;
+	}
+}

@@ -1,72 +1,74 @@
-@use '../../global/'as var;
+@use '../../global/' as var;
 
 .c-post-card {
-  padding: 25px;
-  background: #fff;
-  border: 1px solid #d9e7ff;
-  border-radius: 19px;
+	padding: 25px;
+	background: #fff;
+	border: 1px solid #d9e7ff;
+	border-radius: 19px;
 
-  &__top {}
+	&__top {}
 
-  &__title {
-    @include var.font-size(20);
+	&__title {
+		@include var.font-size(20);
 
-    margin-top: 14px;
-    font-weight: 600;
-    line-height: 1.5;
+		margin-top: 14px;
+		font-weight: 600;
+		line-height: 1.5;
 
-    &::before {
-      display: inline;
-      content: attr(data-faq-title);
-    }
-  }
-
-  &__title-link {
-    color: var.$base-text-color;
-  }
-
-  &__bottom {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-top: 24px;
-  }
-			  &__rank {
-			  	margin-right: 10px;
-			  	font-size: 14px;
-			  	font-weight: 300;
-			  	color: var.$base-text-color;
-			  }
-
-  &__date {
-    margin-right: 32px;
-    font-size: 14px;
-    font-weight: 300;
-    color: var.$base-text-color;
-  }
-	&__tag-container{
-	
+		&::before {
+			display: inline;
+			content: attr(data-faq-title);
+		}
 	}
-	&__category-tag{
-			padding: 4px 8px;
-				margin-right: 8px;
-				font-size: 14px;
-				font-weight: 300;
-				color: #0c3898;
-				background: #f7faff;
-				border: 1px solid #f7faff;
-				border-radius: 5px;
-	}
-  &__link {
-    font-size: 14px;
-    font-weight: 600;
-    color: #0c3898;
 
-    &::after {
-      display: inline-block;
-      margin-left: 10px;
-      vertical-align: text-top;
-      content: url(/static/assets/images/link-arrow.svg);
-    }
-  }
+	&__title-link {
+		color: var.$base-text-color;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		margin-top: 24px;
+	}
+
+	&__rank {
+		margin-right: 10px;
+		font-size: 14px;
+		font-weight: 300;
+		color: var.$base-text-color;
+	}
+
+	&__date {
+		margin-right: 32px;
+		font-size: 14px;
+		font-weight: 300;
+		color: var.$base-text-color;
+	}
+
+	&__tag-container {}
+
+	&__category-tag {
+		padding: 4px 8px;
+		margin-right: 8px;
+		font-size: 14px;
+		font-weight: 300;
+		color: var.$primary-color;
+		background: #f7faff;
+		border: 1px solid #f7faff;
+		border-radius: 5px;
+	}
+
+	&__link {
+		font-size: 14px;
+		font-weight: 600;
+		color: var.$primary-color;
+
+		&::after {
+			display: inline-block;
+			margin-left: 10px;
+			vertical-align: text-top;
+			content: url(/static/assets/images/link-arrow.svg);
+		}
+	}
 }

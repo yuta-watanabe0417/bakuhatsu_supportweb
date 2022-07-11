@@ -1,6 +1,7 @@
 @use '../global/' as var;
 
 .l-main {
-  // position: relative;
-  margin-top: 27px;
+	// position: relative;
+	margin-top: 27px;
+	overflow: hidden;
 }

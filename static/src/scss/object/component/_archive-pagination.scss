@@ -3,61 +3,72 @@
 @use '../../global' as var;
 
 .c-archive-pagination {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 
-  &__item {
-    margin-right: 14px;
+	&__item {
+		margin-right: 14px;
 
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+		&:last-child {
+			margin-right: 0;
+		}
 
-  &__link {
-    display: block;
-    padding: 17px 20px;
-    font-size: 21px;
-    font-weight: 700;
-    color: #0c3898;
-    background: #fff;
+		&:not(:first-of-type):not(:last-of-type) {
+			.c-archive-pagination__link {
+				&:hover {
+					color: #fff;
+					background-color: var.$primary-color;
+					border-radius: 6px;
+				}
+			}
+		}
+	}
 
-    &:hover {
-      color: #0c3898;
-      background-color: #fff;
-      opacity: 0.5;
-    }
+	&__link {
+		display: block;
+		padding: 17px 20px;
+		font-size: 21px;
+		font-weight: 700;
+		color: var.$primary-color;
 
-    &[aria-current='page'] {
-      color: #fff;
-      background-color: #0c3898;
-      border-radius: 6px;
-    }
-  }
+		&[aria-current='page'] {
+			color: #fff;
+			background-color: var.$primary-color;
+			border-radius: 6px;
+		}
+	}
 
-  &__text {
-    position: relative;
-    font-size: 21px;
-    font-weight: 600;
-    color: #0c3898;
-  }
+	&__text {
+		position: relative;
+		font-size: 21px;
+		font-weight: 600;
+		color: var.$primary-color;
+	}
 
-  .previous {
-    &::before {
-      position: absolute;
-      top: 3px;
-      left: -20px;
-      content: url(/static/assets/images/link-arrow.svg);
-      transform: rotate(180deg);
-    }
-  }
+	.previous {
+		&::before {
+			position: absolute;
+			top: 3px;
+			left: -20px;
+			content: url(/static/assets/images/link-arrow.svg);
+			transform: rotate(180deg);
+		}
 
-  .next {
-    &::after {
-      position: absolute;
-      top: 3px;
-      right: -20px;
-      content: url(/static/assets/images/link-arrow.svg);
-    }
-  }
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	.next {
+		&::after {
+			position: absolute;
+			top: 3px;
+			right: -20px;
+			content: url(/static/assets/images/link-arrow.svg);
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
 }

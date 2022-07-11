@@ -1,11 +1,11 @@
-@use '../../global/'as var;
+@use '../../global/' as var;
 
 .c-category-tag {
-  padding: 4px 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: 0.0145455em;
-  background: #0c3898;
-  border-radius: 5px;
+	padding: 4px 8px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: 0.0145455em;
+	background: var.$primary-color;
+	border-radius: 5px;
 }

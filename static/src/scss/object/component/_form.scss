@@ -1,0 +1,17 @@
+@use '../../global/'as var;
+
+
+.c-request-form {
+	&__wrapper {
+		max-width: 993px;
+		padding-top: 21px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&__inner {
+		max-width: 858px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

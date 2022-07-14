@@ -1,6 +1,6 @@
 @use '../../../global/' as var;
 
-.p-contents-comments {
+.c-request-form {
 	padding-bottom: 32px;
 	margin-top: 44px;
 	background-color: #fff;
@@ -41,14 +41,5 @@
 		&:first-child {
 			border-top: 0;
 		}
-	}
-}
-
-.p-contents-comments-form {
-	&__wrapper {
-		max-width: 993px;
-		padding-top: 21px;
-		margin-right: auto;
-		margin-left: auto;
 	}
 }

@@ -6,6 +6,14 @@
 	font-weight: 600;
 	color: #fff;
 	letter-spacing: 0.0145455em;
-	background: var.$primary-color;
 	border-radius: 5px;
+	&__primary{
+		background: var.$primary-color;
+	}
+	&__green{
+		background: var.$green-color;
+	}
+	&__answer-primary{
+		background: var.$answer-primary-color;
+	}
 }

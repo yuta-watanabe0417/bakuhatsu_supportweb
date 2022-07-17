@@ -1,31 +1,35 @@
 @use '../../global/' as var;
 
-.p-privacy-policy{
-	h1{}
-	h2{
-		font-weight: 600;
-			font-size: 26px;
-			color: #323232;
-			border-bottom: 1px solid var.$primary-color;
-			padding-bottom: .5rem;
-	}
-	h3{}
-	h4{}
-	h5{}
-	h6{}
-	p{
-		font-style: normal;
-			font-weight: 300;
-			font-size: 16px;
-			margin-top: 1rem;
-				line-height: 1.7;
-	}
-	nav{}
-	ul{
-		margin-top: 1rem;
-		padding: 0 1rem;
-	}
-	li{
-		list-style: disc;
-	}
+.p-privacy-policy {
+  h1{}
+
+  h2 {
+    padding-bottom: 0.5rem;
+    font-size: 26px;
+    font-weight: 600;
+    color: #323232;
+    border-bottom: 1px solid var.$primary-color;
+  }
+  h3{}
+  h4{}
+  h5{}
+  h6{}
+
+  p {
+    margin-top: 1rem;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  nav{}
+
+  ul {
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  li {
+    list-style: disc;
+  }
 }

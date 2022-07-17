@@ -21,9 +21,9 @@
   &::after {
     position: absolute;
     top: 71%;
-	left: -73%;
+    left: -73%;
     display: inline-block;
-width: 715px;
+    width: 715px;
     height: 1px;
     content: '';
     background-color: var.$primary-color;
@@ -31,5 +31,23 @@ width: 715px;
 
   &__subtext {
     margin-top: 16px;
+  }
+}
+
+.c-section-heading {
+  text-align: center;
+
+  &__title {
+    font-size: 26px;
+    font-weight: 600;
+
+    &::before {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 16px;
+      font-weight: 400;
+      color: var.$primary-color;
+      content: attr(data-english-title);
+    }
   }
 }

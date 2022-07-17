@@ -1,67 +1,67 @@
 @use '../../global/' as var;
 
 .c-comments-card {
-	padding-top: 21px;
-	padding-bottom: 21px;
+  padding-top: 21px;
+  padding-bottom: 21px;
 
-	&__top {
-		display: flex;
-		align-items: center;
-	}
+  &__top {
+    display: flex;
+    align-items: center;
+  }
 
-	&__icon-inner {
-		width: 66px;
-		height: auto;
-		margin-right: 16px;
-	}
+  &__icon-inner {
+    width: 66px;
+    height: auto;
+    margin-right: 16px;
+  }
 
-	&__icon {
-		width: 100%;
-		height: 100%;
-	}
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
 
-	&__icon-right {}
+  &__icon-right {}
 
-	&__name {
-		font-size: 16px;
-		font-weight: 300;
-	}
+  &__name {
+    font-size: 16px;
+    font-weight: 300;
+  }
 
-	&__date {
-		display: block;
-		margin-top: 8px;
-		font-size: 16px;
-		font-weight: 300;
-	}
+  &__date {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 300;
+  }
 
-	&__middle {
-		padding-left: 82px;
-		margin-top: 21px;
-	}
+  &__middle {
+    padding-left: 82px;
+    margin-top: 21px;
+  }
 
-	&__contents {
-		font-size: 16px;
-		font-weight: 300;
-		line-height: 1.3;
-		letter-spacing: 0.0145455em;
-	}
+  &__contents {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0.0145455em;
+  }
 
-	&__bottom {
-		padding-left: 82px;
-		margin-top: 21px;
-	}
+  &__bottom {
+    padding-left: 82px;
+    margin-top: 21px;
+  }
 
-	&__link {
-		position: relative;
-		font-size: 14px;
-		font-weight: 600;
-		color: var.$primary-color;
+  &__link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    color: var.$primary-color;
 
-		&::after {
-			position: absolute;
-			top: 1px;
-			right: -20px;
-			content: url(/static/assets/images/link-arrow.svg);
-		}
-	}
+    &::after {
+      position: absolute;
+      top: 1px;
+      right: -20px;
+      content: url(/static/assets/images/link-arrow.svg);
+    }
+  }
 }

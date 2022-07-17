@@ -1,22 +1,26 @@
 @use '../../global/' as var;
 
 .p-contents-list {
-padding-top: 28px;
+  padding-top: 28px;
 
-	&__wrapper {
-	}
-	&__list{
-		padding-bottom: 60px;
-	}
-	&__container {
-		padding-top: 35px;
-		padding-bottom: 10px;
-	}
-	&__column{
-		margin-top: 16px;
-	}
-	&__button-inner {
-		text-align: center;
-			margin: 46px 0;
-	}
+  &__wrapper {
+  }
+
+  &__list {
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    padding-top: 35px;
+    padding-bottom: 10px;
+  }
+
+  &__column {
+    margin-top: 16px;
+  }
+
+  &__button-inner {
+    margin: 46px 0;
+    text-align: center;
+  }
 }

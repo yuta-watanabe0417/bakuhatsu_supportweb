@@ -1,59 +1,59 @@
 @use '../../global/' as var;
 
 .c-tab-navigation {
-	margin-top: 30px;
+  margin-top: 30px;
 
-	&__wrapper {}
+  &__wrapper {}
 
-	&__navigation {
-		margin-top: 12px;
-	}
+  &__navigation {
+    margin-top: 12px;
+  }
 
-	&__container {
-		display: flex;
-		align-items: center;
-		border-bottom: 1px solid var.$primary-color;
-	}
+  &__container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var.$primary-color;
+  }
 
-	&__item {
-		padding: 8px 16px;
-		margin-right: 12px;
-		font-weight: bold;
-		color: var.$primary-color;
-		text-align: center;
-		list-style: none;
-		cursor: pointer;
-		border: solid 1px var.$primary-color;
-		border-radius: 5px 5px 0 0;
-		margin-bottom: -1px;
+  &__item {
+    padding: 8px 16px;
+    margin-right: 12px;
+    margin-bottom: -1px;
+    font-weight: bold;
+    color: var.$primary-color;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+    border: solid 1px var.$primary-color;
+    border-radius: 5px 5px 0 0;
 
-		&.is-active {
-			background-color: #fff;
-			border-bottom: 1px solid #fff;
-			transition: all 0.2s ease-out;
-		}
-	}
+    &.is-active {
+      background-color: var.$white;
+      border-bottom: 1px solid var.$white;
+      transition: all 0.2s ease-out;
+    }
+  }
 
-	&__tab-panel {
-		display: none;
+  &__tab-panel {
+    display: none;
 
-		&.is-show {
-			display: block;
-		}
-	}
+    &.is-show {
+      display: block;
+    }
+  }
 
-	&__list {
-		padding-top: 36px;
-		padding-bottom: 72px;
-		margin-top: -1px;
-		border-top: 1px solid var.$primary-color;
-	}
+  &__list {
+    padding-top: 36px;
+    padding-bottom: 72px;
+    margin-top: -1px;
+    border-top: 1px solid var.$primary-color;
+  }
 
-	&__column {
-		margin-bottom: 21px;
+  &__column {
+    margin-bottom: 21px;
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static '/assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/main.css' %}" />
   </head>
   <body>
     <header class="l-header">
@@ -31,12 +31,6 @@
               <a href="" class="l-header-nav__link">メニュー名</a>
             </li>
             <li class="l-header-nav__item">
-              <a href="" class="l-header-nav__link">メニュー名</a>
-            </li>
-            <li class="l-header-nav__item">
-              <a href="" class="l-header-nav__link">メニュー名</a>
-            </li>
-            <li class="l-header-nav__item">
               <a class="c-button">ログイン</a>
             </li>
           </ul>
@@ -49,17 +43,18 @@
           {% block breadcrumb %}{% endblock %}
         </ul>
       </div>
-			 {% if "detail" not in request.get_full_path %}
+      {% if "detail" not in request.get_full_path %}
       <section class="l-page-first">
         <div class="l-page-first__wrapper l-wrapper">
-          <h1 class="c-page-title" data-english-title="TOP">{% block page-title %}{% endblock %}</h1>
+          <h1 class="c-page-title" data-english-title="TOP">
+            {% block page-title %}{% endblock %}
+          </h1>
           <p class="c-page-title__sub">
             {% block page-subtitle %}{% endblock %}
           </p>
         </div>
       </section>
-			 {% endif %}
-      {% block content %}{% endblock %}
+      {% endif %} {% block content %}{% endblock %}
     </main>
     <footer class="l-footer">
       <div class="l-footer__wrapper l-wrapper">
@@ -122,6 +117,6 @@
         </div>
       </div>
     </footer>
-		<script src="{% static '/assets/js/main.js' %}"></script>
+    <script src="{% static '/assets/js/main.js' %}"></script>
   </body>
 </html>

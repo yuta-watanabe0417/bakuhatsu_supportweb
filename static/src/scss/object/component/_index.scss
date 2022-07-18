@@ -3,11 +3,15 @@
 @forward 'page-title';
 @forward 'search-form';
 @forward 'section-title';
+
 // @forward 'faq-card';
+@forward 'form';
 @forward 'post-card';
 @forward 'contents-card';
 @forward 'comments-card';
 @forward 'tab-navigation';
+@forward 'contents-detail';
+@forward 'faq-detail';
 @forward 'category-tag';
 @forward 'archive-pagination';
 @forward 'primary-button';

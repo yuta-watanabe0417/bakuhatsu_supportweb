@@ -2,7 +2,7 @@
 
 .p-faq-request {
   padding-top: 130px;
-  background: #f7faff;
+  background: var.$bg-light-color;
 
   &__wrapper {
     padding: 69px;
@@ -11,7 +11,7 @@
   &__container {
     padding: 48px 103px;
     margin-top: 27px;
-    background: #fff;
+    background: var.$white;
     border-radius: 19px;
     box-shadow: 0 0 10px #d9e7ff;
   }
@@ -23,87 +23,10 @@
   &__title {
     font-size: 28px;
     font-weight: 700;
-    color: #0c3898;
+    color: var.$primary-color;
   }
 
   &__form-inner {
     margin-top: 40px;
-  }
-}
-
-.p-faq-request-form {
-  &__items {
-    margin-top: 26px;
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &:last-child {
-      margin-top: 42px;
-      text-align: center;
-    }
-  }
-
-  &__text {
-    display: block;
-    margin-bottom: 11px;
-    font-size: 18px;
-    font-weight: 300;
-    color: #323232;
-  }
-
-  &__category-inner {
-    position: relative;
-    display: inline;
-    margin-top: 11px;
-
-    &::after {
-      position: absolute;
-      top: 28px;
-      right: -126px;
-      display: inline-block;
-      content: url(/static/assets/images/link-arrow.svg);
-      transform: rotate(90deg);
-    }
-  }
-
-  &__category {
-    position: relative;
-    display: block;
-    padding: 11px;
-    padding-right: 30px;
-    font-size: 20px;
-    font-weight: 300;
-    color: #0c3898;
-    cursor: pointer;
-    border: 1px solid #d9e7ff;
-    border-radius: 4px;
-  }
-
-  &__input {
-    width: 100%;
-    padding: 21px 18px;
-    background: #fff;
-    border: 1px solid #d9e7ff;
-    border-radius: 6px;
-
-    &::placeholder {
-      font-size: 20px;
-      color: #c9c9c9;
-    }
-  }
-
-  &__input-textarea {
-    width: 100%;
-    padding: 21px 18px;
-    background: #fff;
-    border: 1px solid #d9e7ff;
-    border-radius: 6px;
-
-    &::placeholder {
-      font-size: 20px;
-      color: #c9c9c9;
-    }
   }
 }

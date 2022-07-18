@@ -1,3 +1,5 @@
+@use '../../global/' as var;
+
 .c-comments-card {
   padding-top: 21px;
   padding-bottom: 21px;
@@ -17,7 +19,8 @@
     width: 100%;
     height: 100%;
   }
-  &__icon-right{}
+
+  &__icon-right {}
 
   &__name {
     font-size: 16px;
@@ -52,7 +55,7 @@
     position: relative;
     font-size: 14px;
     font-weight: 600;
-    color: #0c3898;
+    color: var.$primary-color;
 
     &::after {
       position: absolute;

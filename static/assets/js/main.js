@@ -52,8 +52,3 @@ document.addEventListener('DOMContentLoaded', () => {
     tab.addEventListener('click', tabClick);
   });
 });
-
-window.onload = async () => {
-  const md = markdown.parse($input.value)
-  $output.innerHTML = md;
-}

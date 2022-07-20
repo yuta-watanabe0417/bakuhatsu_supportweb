@@ -1,0 +1,36 @@
+{% load static %}
+<section class="p-archive-pagination">
+    <div class="p-archive-pagination__wrapper">
+        <nav aria-label="ページネーション">
+            <ul class="c-archive-pagination">
+                {% if page_obj.has_previous %}
+                <li class="c-archive-pagination__item">
+                    <a class="c-archive-pagination__link" href="?page={{ page_obj.previous_page_number }}">
+                        <span class="c-archive-pagination__text previous">前へ</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                <li class="c-archive-pagination__item">
+                    <a class="c-archive-pagination__link"  aria-current="page">
+                        <span class="u-screen-reader-text"></span>{{ num }}</a>
+                </li>
+                {% else %}
+                <li class="c-archive-pagination__item">
+                    <a class="c-archive-pagination__link" href="?page={{ num }}">
+                        <span class="u-screen-reader-text">ページ</span>{{ num }}</a>
+                </li>
+                {% endif%}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                <li class="c-archive-pagination__item">
+                    <a class="c-archive-pagination__link" href="">
+                        <span class="c-archive-pagination__text next">次へ</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</section>

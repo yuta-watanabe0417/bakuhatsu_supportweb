@@ -1,0 +1,22 @@
+@use '../../global/' as var;
+
+.c-category-tag {
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var.$white;
+  letter-spacing: 0.0145455em;
+  border-radius: 5px;
+
+  &__primary {
+    background: var.$primary-color;
+  }
+
+  &__green {
+    background: var.$green-color;
+  }
+
+  &__answer-primary {
+    background: var.$answer-primary-color;
+  }
+}

@@ -1,0 +1,32 @@
+@use '../../../global/' as var;
+
+.p-faq-request {
+  padding-top: 130px;
+  background: var.$bg-light-color;
+
+  &__wrapper {
+    padding: 69px;
+  }
+
+  &__container {
+    padding: 48px 103px;
+    margin-top: 27px;
+    background: var.$white;
+    border-radius: 19px;
+    box-shadow: 0 0 10px #d9e7ff;
+  }
+
+  &__title-inner {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var.$primary-color;
+  }
+
+  &__form-inner {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,34 @@
+{% load static %}
+{% load markdown_extras %}
+<section class="p-contents-detail">
+  <div class="p-contents-detail__wrapper l-wrapper">
+    <article class="c-contents-detail">
+      <div class="c-contents-detail__wrapper">
+        <div class="c-contents-detail__top">
+          <div class="c-contents-detail__data-container">
+            <time datetime="" class="c-contents-detail__date">{{ object.created_at|date:'Y/n/j' }}</time>
+            <div class="c-contents-detail__category-inner">
+                            {% for tag in object.tags.all %}
+                            <span class="c-information-article__category-tag">#{{ tag.name }}</span>
+                            {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="c-contents-detail__middle">
+          <div class="c-contents-detail__title-inner">
+            <h2 class="c-contents-detail__title">
+              {{ object.title }}
+            </h2>
+          </div>
+        </div>
+        <div class="c-contents-detail__bottom">
+          <div class="c-contents-detail__contents">
+            <p>
+              {{ object.content | markdown | safe }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

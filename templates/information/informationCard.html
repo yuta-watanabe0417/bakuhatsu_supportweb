@@ -1,0 +1,32 @@
+{% load static %}
+<section class="p-contents-list">
+    <div class="p-contents-list__wrapper l-wrapper">
+        <div class="p-contents-list__container l-container">
+            <h2 class="c-section-title" data-english-title="INFORMATION">お知らせ</h2>
+            <p class="c-section-title__subtext">本サイトの更新状況をお知らせします。</p>
+            {% for information in information_list %}
+            <div class="p-contents-list__column">
+                <article class="c-post-card">
+                    <div class="c-post-card__top">
+                        <div class="c-post-card__information-inner">
+                            <span class="c-category-tag c-category-tag__primary" >{{ information.category }}</span>
+                            <time datetime="" class="c-post-card__date">{{ information.created_at|date:"Y/n/j" }}</time>
+                        </div>
+                        <h3 class="c-post-card__title">
+                            <a href="{% url 'information_detail' pk=information.id %}" class="c-post-card__title-link">
+                                {{ information.title }}
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="c-post-card__bottom">
+                        <a href="{% url 'information_list' %}" class="c-post-card__link">詳しく読む</a>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+            <div class="p-contents-list__button-inner">
+                <a href="{% url 'information_list' %}" class="c-primary-button">もっと見る</a>
+            </div>
+        </div>
+    </div>
+</section>

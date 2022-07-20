@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}よくある質問{% endblock %}
+{% block breadcrumb %}
+<li class="l-breadcrumb__item">
+  <a href="{% url 'index' %}" class="l-breadcrumb__link">HOME</a>
+</li>
+<li class="l-breadcrumb__item">
+  よくある質問
+</li>
+{% endblock %}
+{% block page-title %}
+<h1 class="c-page-title" data-english-title="FAQ">よくある質問</h1>
+{% endblock %}
+{% block page-subtitle %}テキストが入ります。テキストが入ります。テキストが入ります。{% endblock %}
+{% block content %}
+<div class="l-section">
+	{% include 'faq/faqCard.html' %}
+<!--	{% include 'search-category.html' %}-->
+</div>
+{% endblock %}

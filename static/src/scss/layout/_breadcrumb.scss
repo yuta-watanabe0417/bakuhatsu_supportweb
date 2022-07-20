@@ -1,0 +1,44 @@
+@use '../global/' as var;
+
+.l-breadcrumb {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 14px;
+    font-weight: 300;
+    color: var.$base-text-color;
+
+    @include var.font-size(16);
+
+    &:first-child::before {
+      margin-right: 5px;
+      content: url('/static/assets/images/home.svg');
+    }
+
+    &::after {
+      margin-left: 14px;
+      color: var.$primary-color;
+      content: '>';
+    }
+
+    &:last-child::after {
+      margin-left: 0;
+      content: '';
+    }
+  }
+
+  &__link {
+    @include var.font-size(17);
+
+    font-weight: 400;
+    color: var.$primary-color;
+
+    &:hover {
+      text-decoration-line: underline;
+      opacity: 0.5;
+    }
+  }
+}

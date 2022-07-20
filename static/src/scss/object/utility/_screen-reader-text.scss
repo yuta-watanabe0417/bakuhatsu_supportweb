@@ -1,0 +1,10 @@
+// Object/Utility
+// object/utility/__screen-reader-text.scss
+// アクセシビリティ対策
+.u-screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}コメント詳細{% endblock %}
+{% block breadcrumb %}
+<li class="l-breadcrumb__item">
+  <a href="{% url 'index' %}" class="l-breadcrumb__link">HOME</a>
+</li>
+<li class="l-breadcrumb__item">
+  <a href="{% url 'contents_detail' pk=object.article.id %}" class="l-breadcrumb__link">{{ object.article.title }}</a>
+</li>
+<li class="l-breadcrumb__item">
+  コメント詳細
+</li>
+{% endblock %}
+{% block content %}
+<section class="p-contents-detail">
+  <div class="p-contents-detail__wrapper l-wrapper">
+{% include 'contents/comment/commentArticle.html' %} 
+  </div>
+</section>
+<!-- {% include 'keywordSearch.html' %} -->
+{% endblock %}

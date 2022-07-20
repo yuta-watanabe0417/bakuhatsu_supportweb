@@ -1,0 +1,15 @@
+{% load static %}
+<section class="p-contents-list">
+    <div class="p-contents-list__wrapper l-wrapper">
+        <div class="p-contents-list__container l-container">
+            <h2 class="c-section-title" data-english-title="{% block english_title %}{% endblock %}">
+                {% block section_title %}{% endblock %}
+            </h2>
+            <p class="c-section-title__subtext">
+                {% block section_title_subtext %}{% endblock %}
+            </p>
+            {% block card_list %}{% endblock %}
+            {% block detail %}{% endblock %}
+        </div>
+    </div>
+</section>

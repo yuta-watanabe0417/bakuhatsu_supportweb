@@ -14,7 +14,6 @@ class TopPage(ListView):
     def get_context_data(self, **kwargs):
         context = super(TopPage, self).get_context_data(**kwargs)
         context.update({
-
             'top_flag': True,
             'section_title_faq': {'title': '最新FAQ', 'sub_text': '新着のよくある質問です。', 'english_title': 'PICKUP FAQ'},
             'faq_list': Faq.objects.all()[:5],

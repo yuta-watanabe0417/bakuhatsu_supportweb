@@ -14,7 +14,7 @@ class ArticleList(ListView):
         context = super(ArticleList, self).get_context_data(**kwargs)
         context.update({
             'Tags': Tag.objects.all(),
-            'object_list': Faq.objects.all(),
+            'faq_list': Faq.objects.all(),
         })
         return context
 

@@ -53,3 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+window.onload = async () => {
+  const md = markdown.parse($input.value)
+  $output.innerHTML = md;
+}

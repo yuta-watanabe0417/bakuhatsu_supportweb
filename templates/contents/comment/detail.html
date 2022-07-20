@@ -3,13 +3,13 @@
 {% block title %}コメント詳細{% endblock %}
 {% block breadcrumb %}
 <li class="l-breadcrumb__item">
-  <a href="" class="l-breadcrumb__link">HOME</a>
+  <a href="{% url 'index' %}" class="l-breadcrumb__link">HOME</a>
 </li>
 <li class="l-breadcrumb__item">
-  <a href="" class="l-breadcrumb__link">記事タイトル</a>
+  <a href="{% url 'contents_detail' pk=object.article.id %}" class="l-breadcrumb__link">{{ object.article.title }}</a>
 </li>
 <li class="l-breadcrumb__item">
-  コメントタイトル
+  コメント詳細
 </li>
 {% endblock %}
 {% block content %}

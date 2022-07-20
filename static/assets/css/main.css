@@ -289,6 +289,7 @@ p:lang(en) {
   align-items: center;
   margin-right: 26px;
   text-align: center;
+  margin-top: 22px;
 }
 .l-header-nav__item:nth-last-child(2) {
   margin-right: 0;
@@ -301,8 +302,20 @@ p:lang(en) {
   font-weight: 300;
   line-height: 1.2;
   color: #323232;
+  position: relative;
   font-size: 18px;
   font-size: 1.125rem;
+}
+.l-header-nav__link::before {
+  content: attr(data-english-title);
+  font-weight: 400;
+  color: #323232;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 .l-header-nav .c-button {
   padding: 16px 21px;
@@ -998,6 +1011,63 @@ p:lang(en) {
   color: #323232;
   letter-spacing: 0.0145455em;
 }
+.c-contents-detail__contents h1 {
+  color: #F38A72;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.0145455em;
+}
+.c-contents-detail__contents h2 {
+  color: #0C3898;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.0145455em;
+  border-bottom: 1px solid #0C3898;
+  padding-bottom: 16px;
+  padding-top: 36px;
+}
+.c-contents-detail__contents h3 {
+  color: #0C3898;
+  font-weight: 300;
+  font-size: 21px;
+  letter-spacing: 0.0145455em;
+  border-bottom: double #0C3898;
+  padding-bottom: 16px;
+  padding-top: 36px;
+}
+.c-contents-detail__contents h4 {
+  color: #0C3898;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.0145455em;
+  padding-bottom: 16px;
+  padding-top: 36px;
+}
+.c-contents-detail__contents .athJax {
+  margin: 0;
+  text-align: left;
+}
+.c-contents-detail__contents img {
+  margin-top: 16px;
+}
+.c-contents-detail__contents pre {
+  margin: 16px 0;
+  overflow: auto;
+  color: #fff;
+  background: black;
+  padding: 13px 13px;
+  border: rgb(14, 164, 233) solid 1px;
+}
+.c-contents-detail__contents code {
+  font-family: Menlo, Monaco, "Lucida Console", Consolas, monospace;
+  font-size: 85%;
+  margin: 0;
+}
+.c-contents-detail__contents pre code {
+  padding: 0;
+  overflow: visible;
+  overflow-wrap: normal;
+}
 .c-contents-detail__answer {
   padding: 21px 27px;
   background: #fef8f7;
@@ -1485,4 +1555,8 @@ p:lang(en) {
 
 .mb-4 {
   margin-bottom: 4rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }

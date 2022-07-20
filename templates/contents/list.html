@@ -3,18 +3,19 @@
 {% block title %}コンテンツ一覧{% endblock %}
 {% block breadcrumb %}
 <li class="l-breadcrumb__item">
-  <a href="" class="l-breadcrumb__link">HOME</a>
+  <a href="{% url 'index' %}" class="l-breadcrumb__link">HOME</a>
 </li>
 <li class="l-breadcrumb__item">
   コンテンツ一覧
 </li>
 {% endblock %}
-{% block page-title %}コンテンツ一覧{% endblock %}
+{% block page-title %}
+<h1 class="c-page-title" data-english-title="CONTENTS">コンテンツ一覧</h1>
+{% endblock %}
 {% block page-subtitle %}テキストが入ります。テキストが入ります。テキストが入ります。{% endblock %}
 {% block content %}
 <div class="l-section">
 	{% include 'contents/contentsCard.html' %}
-	{% include 'faq/faqCard.html' %}
-	{% include 'search-category.html' %}
+<!--	{% include 'search-category.html' %}-->
 </div>
 {% endblock %}

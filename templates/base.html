@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static '/assets/css/main.css' %}" />
+    {% block readscript %}{% endblock %}
   </head>
   <body>
     <header class="l-header">
@@ -25,14 +26,29 @@
         <nav class="l-header-nav">
           <ul class="l-header-nav__container">
             <li class="l-header-nav__item">
-              <a href="" class="l-header-nav__link">メニュー名</a>
+              <a href="{% url 'index' %}" class="l-header-nav__link" data-english-title="HOME">
+                ホーム
+              </a>
             </li>
             <li class="l-header-nav__item">
-              <a href="" class="l-header-nav__link">メニュー名</a>
+              <a href="{% url 'contents_list' %}" class="l-header-nav__link" data-english-title="CONTENTS">
+                コンテンツ一覧
+              </a>
             </li>
             <li class="l-header-nav__item">
-              <a class="c-button">ログイン</a>
+              <a href="{% url 'faq_list' %}" class="l-header-nav__link" data-english-title="FAQ">
+                よくある質問
+              </a>
             </li>
+            <li class="l-header-nav__item">
+              <a href="http://bakuhatsu.jp/" target="_blank" class="l-header-nav__link" data-english-title="CORPORATION">
+                会社ホームページ
+              </a>
+            </li>
+            <!--            TODO 初回リリースでは保留-->
+            <!--            <li class="l-header-nav__item">-->
+            <!--              <a class="c-button">ログイン</a>-->
+            <!--            </li>-->
           </ul>
         </nav>
       </div>
@@ -43,7 +59,7 @@
           {% block breadcrumb %}{% endblock %}
         </ul>
       </div>
-      {% if "detail" not in request.get_full_path %}
+      {% if "article" not in request.get_full_path %}
       <section class="l-page-first">
         <div class="l-page-first__wrapper l-wrapper">
           <h1 class="c-page-title" data-english-title="TOP">
@@ -54,7 +70,8 @@
           </p>
         </div>
       </section>
-      {% endif %} {% block content %}{% endblock %}
+      {% endif %}
+      {% block content %}{% endblock %}
     </main>
     <footer class="l-footer">
       <div class="l-footer__wrapper l-wrapper">
@@ -74,30 +91,7 @@
           </div>
           <div class="l-footer__column">
             <div class="l-footer__item">
-              <a href="" class="l-footer__link">会社概要</a>
-            </div>
-            <div class="l-footer__item">
-              <a href="" class="l-footer__link">プライバシーポリシー</a>
-            </div>
-            <div class="l-footer__item">
-              <a href="" class="l-footer__link">利用規約</a>
-            </div>
-            <div class="l-footer__item">
-              <a href="" class="l-footer__link">メニュー名</a>
-            </div>
-          </div>
-          <div class="l-footer__column">
-            <div class="l-footer__item">
-              <a href="" class="l-footer__link">メニュー名</a>
-            </div>
-            <div class="l-footer__item">
-              <a href="" class="l-footer__link">メニュー名</a>
-            </div>
-            <div class="l-footer__item">
-              <a href="" class="l-footer__link">メニュー名</a>
-            </div>
-            <div class="l-footer__item">
-              <a href="" class="l-footer__link">メニュー名</a>
+              <a href="{% url 'privacy_policy' %}" class="l-footer__link">プライバシーポリシー</a>
             </div>
           </div>
           <div class="l-footer__column">

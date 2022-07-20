@@ -1,13 +1,17 @@
 {% load static %}
-
+{% load markdown_extras %}
+{% load widget_tweaks %}
 <section class="c-contents-detail no-shadow">
   <div class="c-contents-detail__wrapper l-wrapper">
+    {% if thread_list%}
     <div class="c-section-heading">
       <h2 class="c-section-heading__title" data-english-title="COMMENTS">
-        コメント
+        質問/コメント
       </h2>
     </div>
+    {% endif %}
     <div class="c-contents-detail__container">
+      {% for thread in thread_list %}
       <div class="c-contents-detail__column">
         <div class="c-comments-card">
           <div class="c-comments-card__top">
@@ -19,150 +23,54 @@
               />
             </picture>
             <div class="c-comments-card__icon-right">
-              <p class="c-comments-card__name">user_name</p>
-              <time class="c-comments-card__date" datetime="2022-05-06"
-                >2022/05/06</time
-              >
+              <p class="c-comments-card__name">{{ thread.name }}</p>
+              <time class="c-comments-card__date" datetime="{{ thread.created_at|date:'Y/n/j' }}">
+                {{ thread.created_at|date:'Y/n/j' }}
+              </time>
             </div>
           </div>
           <div class="c-comments-card__middle">
             <p class="c-comments-card__contents">
-              記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。
+              {{ thread.message }}</p>
             </p>
           </div>
           <div class="c-comments-card__bottom">
-            <a href="" class="c-comments-card__link">回答をみる</a>
+            <a href="{% url 'comment_detail' pk=thread.id %}" class="c-comments-card__link">
+              回答をみる
+            </a>
           </div>
         </div>
       </div>
-      <div class="c-contents-detail__column">
-        <div class="c-comments-card">
-          <div class="c-comments-card__top">
-            <picture class="c-comments-card__icon-inner">
-              <img
-                class="c-comments-card__icon"
-                src="{% static '/assets/images/user-icon.svg' %}"
-                alt=""
-              />
-            </picture>
-            <div class="c-comments-card__icon-right">
-              <p class="c-comments-card__name">user_name</p>
-              <time class="c-comments-card__date" datetime="2022-05-06"
-                >2022/05/06</time
-              >
-            </div>
-          </div>
-          <div class="c-comments-card__middle">
-            <p class="c-comments-card__contents">
-              記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。
-            </p>
-          </div>
-          <div class="c-comments-card__bottom">
-            <a href="" class="c-comments-card__link">回答をみる</a>
-          </div>
-        </div>
-      </div>
-      <div class="c-contents-detail__column">
-        <div class="c-comments-card">
-          <div class="c-comments-card__top">
-            <picture class="c-comments-card__icon-inner">
-              <img
-                class="c-comments-card__icon"
-                src="{% static '/assets/images/user-icon.svg' %}"
-                alt=""
-              />
-            </picture>
-            <div class="c-comments-card__icon-right">
-              <p class="c-comments-card__name">user_name</p>
-              <time class="c-comments-card__date" datetime="2022-05-06"
-                >2022/05/06</time
-              >
-            </div>
-          </div>
-          <div class="c-comments-card__middle">
-            <p class="c-comments-card__contents">
-              記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。
-            </p>
-          </div>
-          <div class="c-comments-card__bottom">
-            <a href="" class="c-comments-card__link">回答をみる</a>
-          </div>
-        </div>
-      </div>
-      <div class="c-contents-detail__column">
-        <div class="c-comments-card">
-          <div class="c-comments-card__top">
-            <picture class="c-comments-card__icon-inner">
-              <img
-                class="c-comments-card__icon"
-                src="{% static '/assets/images/official-icon.svg' %}"
-                alt=""
-              />
-            </picture>
-            <div class="c-comments-card__icon-right">
-              <p class="c-comments-card__name">回答者（爆発研究所 渡邉）</p>
-              <time class="c-comments-card__date" datetime="2022-05-06"
-                >2022/05/06</time
-              >
-            </div>
-          </div>
-          <div class="c-comments-card__middle">
-            <p class="c-comments-card__contents">
-              記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。記事の内容が入ります。
-            </p>
-          </div>
-          <div class="c-comments-card__bottom">
-            <a href="" class="c-comments-card__link">回答をみる</a>
-          </div>
-        </div>
-      </div>
-    </div>
+      {% endfor %}
     <section class="p-post-comments">
       <div class="p-post-comments__wrapper">
         <div class="c-section-heading">
           <h2 class="c-section-heading__title" data-english-title="COMMENTS">
-            コメントを投稿する
+            質問/コメントを投稿する
           </h2>
         </div>
         <div class="p-post-comments__inner">
-          <form action="" class="c-faq-request-form">
+          <form action="{% url 'thread_create' %}" method="POST"  class="c-faq-request-form">
+            {% csrf_token %}
+            <input type="hidden" name="url" value={{ request.build_absolute_uri }}>
+            <input type="hidden" name="article" value={{ content.id }}>
             <div class="c-faq-request-form__items">
-              <label for="" class="c-faq-request-form__text"
-                >お名前(ニックネーム)</label
-              >
-              <input
-                class="c-faq-request-form__input"
-                type="name"
-                name="user_name"
-                id="name"
-                placeholder="ニックネームをご入力ください。（爆発太郎）"
-              />
+              <label for="" class="c-faq-request-form__text">
+                お名前(ニックネーム)
+              </label>
+              {{ form.name | add_class:"c-faq-request-form__input"}}
             </div>
             <div class="c-faq-request-form__items">
-              <label for="" class="c-faq-request-form__text"
-                >メールアドレス</label
-              >
-              <input
-                class="c-faq-request-form__input"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="メールアドレスを入力してください。"
-              />
+              <label for="" class="c-faq-request-form__text">
+                メールアドレス
+              </label>
+              {{ form.email | add_class:"c-faq-request-form__input"}}
             </div>
             <div class="c-faq-request-form__items">
-              <label for="" class="c-faq-request-form__text"
-                >リクエスト内容</label
-              >
-              <textarea
-                class="c-faq-request-form__input-textarea"
-                type="textarea"
-                name="request"
-                id="request"
-                placeholder="質問をご入力してください。"
-                clos="1"
-                rows="15"
-              ></textarea>
+              <label for="" class="c-faq-request-form__text">
+                質問/コメント内容
+              </label>
+              {{ form.message | add_class:"c-faq-request-form__input"}}
             </div>
             <div class="c-faq-request-form__items">
               <button type="submit" class="c-primary-button--fill">

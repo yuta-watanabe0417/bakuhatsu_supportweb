@@ -6,14 +6,15 @@
   <a href="" class="l-breadcrumb__link">HOME</a>
 </li>
 {% endblock %}
-{% block page-title %}爆発研究所 Suppport Web{% endblock %}
+{% block page-title %}
+<h1 class="c-page-title" data-english-title="TOP">爆発研究所 Suppport Web</h1>
+{% endblock %}
 {% block page-subtitle %}爆発研究所のサービスサポートサイトです。{% endblock %}
 {% block content %}
-{% include 'privacy-policy.html' %}
 <div class="l-section">
-	{% include 'information.html' %}
-	{% include 'contents.html' %}
-<!-- {% include 'faq/faqRequest.html' %} -->
-	{% include 'search-category.html' %}
+	{% include 'information/informationCard.html' %}
+	{% include 'pickupList.html' %}
+<!-- 	{% include 'faq/faqRequest.html' %} -->
+<!--	{% include 'search-category.html' %}-->
 </div>
 {% endblock %}

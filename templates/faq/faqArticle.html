@@ -1,51 +1,41 @@
 {% load static %}
+{% load markdown_extras %}
+{% load widget_tweaks %}
 <section class="p-contents-detail">
   <div class="p-contents-detail__wrapper l-wrapper">
     <article class="c-contents-detail">
       <div class="c-contents-detail__wrapper">
         <div class="c-contents-detail__top">
           <div class="c-contents-detail__data-container">
-            <span class="c-contents-detail__rank">会員種別：テキスト？</span>
-            <time datetime="" class="c-contents-detail__date">2022/05/06</time>
+<!--            <span class="c-contents-detail__rank">会員種別：テキスト？</span>-->
+            <time datetime="" class="c-contents-detail__date">{{ object.created_at|date:'Y/n/j' }}</time>
             <div class="c-contents-detail__category-inner">
-              <span class="c-contents-detail__category-tag">小カテゴリー1</span>
-              <span class="c-contents-detail__category-tag">小カテゴリー1</span>
-              <span class="c-contents-detail__category-tag">小カテゴリー1</span>
-              <span class="c-contents-detail__category-tag">小カテゴリー1</span>
+                            {% for tag in object.tags.all %}
+                            <span class="c-faq-article__category-tag">{{ tag.name }}</span>
+                            {% endfor %}
             </div>
           </div>
         </div>
         <div class="c-contents-detail__middle">
           <div class="c-faq-detail">
-            <p
-              class="c-faq-detail__subtitle-question-inner"
-              data-english-title="Question"
-            >
-              <span
-                class="c-faq-detail__subtitle c-faq-detail__subtitle-question"
-                >質問</span
-              >
+            <p class="c-faq-detail__subtitle-question-inner" data-english-title="Question">
+              <span class="c-faq-detail__subtitle c-faq-detail__subtitle-question">質問</span>
             </p>
             <div class="c-faq-detail__title-inner">
               <h2 class="c-faq-detail__title">
-                質問内容が入ります。質問内容が入ります。質問内容が入ります。質問内容が入ります。質問内容が入ります。質問内容が入ります。質問内容が入ります。質問内容が入ります。...
+                {{ object.question }}
               </h2>
             </div>
           </div>
         </div>
         <div class="c-contents-detail__bottom">
           <div class="c-faq-detail">
-            <p
-              class="c-faq-detail__subtitle-answer-inner"
-              data-english-title="Answer"
-            >
-              <span class="c-faq-detail__subtitle c-faq-detail__subtitle-answer"
-                >回答</span
-              >
+            <p class="c-faq-detail__subtitle-answer-inner" data-english-title="Answer">
+              <span class="c-faq-detail__subtitle c-faq-detail__subtitle-answer">回答</span>
             </p>
             <div class="c-faq-detail__answer">
               <p>
-                回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。回答内容が入ります。
+                {{ object.answer | markdown | safe }}
               </p>
             </div>
           </div>
@@ -87,54 +77,25 @@
         <h3 class="p-faq-request__title">\質問リクエストを投稿しよう/</h3>
       </div>
       <div class="p-faq-request__form-inner">
-        <form action="" class="c-faq-request-form">
+        <form action="{% url 'request_create' %}" method="POST" class="c-faq-request-form">
+          {% csrf_token %}
           <div class="c-faq-request-form__items">
-            <label for="" class="c-faq-request-form__text"
-              >リクエスト種別</label
-            >
-            <div class="c-faq-request-form__category-inner">
-              <select
-                name="request_category"
-                id=""
-                class="c-faq-request-form__category"
-              >
-                <option value="" style="display: none">
-                  <span class="c-faq-request-form__arrow">カテゴリー</span>
-                </option>
-                <option value="">テキスト</option>
-                <option value="">テキスト</option>
-                <option value="">テキスト</option>
-                <option value="">テキスト</option>
-                <option value="">テキスト</option>
-                <option value="">テキスト</option>
-              </select>
-            </div>
+            <label for="" class="c-faq-request-form__text">
+              氏名
+            </label>
+            {{ form.name | add_class:"c-faq-request-form__input"}}
           </div>
           <div class="c-faq-request-form__items">
-            <label for="" class="c-faq-request-form__text"
-              >メールアドレス</label
-            >
-            <input
-              class="c-faq-request-form__input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="メールアドレスを入力してください。"
-            />
+            <label for="" class="c-faq-request-form__text">
+              件名
+            </label>
+            {{ form.title | add_class:"c-faq-request-form__input"}}
           </div>
           <div class="c-faq-request-form__items">
-            <label for="" class="c-faq-request-form__text"
-              >リクエスト内容</label
-            >
-            <textarea
-              class="c-faq-request-form__input-textarea"
-              type="textarea"
-              name="request"
-              id="request"
-              placeholder="質問をご入力してください。"
-              clos="1"
-              rows="15"
-            ></textarea>
+            <label for="" class="c-faq-request-form__text">
+              リクエスト内容
+            </label>
+            {{ form.message | add_class:"c-faq-request-form__input"}}
           </div>
           <div class="c-faq-request-form__items">
             <button type="submit" class="c-primary-button--fill">

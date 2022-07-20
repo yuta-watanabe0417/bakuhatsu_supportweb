@@ -6,7 +6,8 @@
   margin-top: 29px;
   background: var.$bg-light-color;
 
-  &__wrapper {}
+  &__wrapper {
+  }
 }
 
 .c-contents-detail {
@@ -33,7 +34,8 @@
     border-radius: 19px;
   }
 
-  &__top {}
+  &__top {
+  }
 
   &__data-container {
     display: flex;
@@ -77,7 +79,8 @@
     margin-top: 8px;
   }
 
-  &__question-inner {}
+  &__question-inner {
+  }
 
   &__subtitle-question-inner {
     padding-bottom: 0.5rem;
@@ -144,16 +147,76 @@
     color: #323232;
     letter-spacing: 0.0145455em;
 
-    h1 {}
+    h1 {
+      color: #F38A72;
+      font-weight: 600;
+      font-size: 24px;
+      letter-spacing: 0.0145455em;
 
-    h2 {}
+    }
 
-    h3 {}
+    h2 {
+      color: #0C3898;
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: 0.0145455em;
+      border-bottom: 1px solid #0C3898;
+      padding-bottom: 16px;
+      padding-top: 36px;
+    }
 
-    h4 {}
+    h3 {
+      color: #0C3898;
+      font-weight: 300;
+      font-size: 21px;
+      letter-spacing: 0.0145455em;
+      border-bottom: double #0C3898;
+      padding-bottom: 16px;
+      padding-top: 36px;
+    }
+
+    h4 {
+      color: #0C3898;
+      font-weight: 300;
+      font-size: 18px;
+      letter-spacing: 0.0145455em;
+      padding-bottom: 16px;
+      padding-top: 36px;
+    }
+
+    .athJax {
+      margin: 0;
+      text-align: left;
+    }
+
+    img {
+      margin-top: 16px;
+    }
+
+    pre {
+      margin: 16px 0;
+      overflow: auto;
+      color: #fff;
+      background: black;
+      padding: 13px 13px;
+      border: rgb(14, 164, 233) solid 1px;
+    }
+
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
   }
 
-  &__answer-inner {}
+  &__answer-inner {
+  }
 
   &__answer {
     padding: 21px 27px;

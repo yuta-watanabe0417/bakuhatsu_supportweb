@@ -1,0 +1,87 @@
+{% extends 'section.html' %}
+{% load static %}
+
+{% block section_title %}
+{{ section_title_contents.title }}
+{% endblock %}
+{% block section_title_subtext %}
+{{ section_title_contents.sub_text }}
+{% endblock %}
+
+{% block card_list %}
+<nav class="c-tab-navigation">
+    <ul class="c-tab-navigation__container">
+        <li class="c-tab-navigation__item is-active" data-tab="01">コンテンツ</li>
+        <li class="c-tab-navigation__item" data-tab="02">FAQ</li>
+    </ul>
+    <div class="c-tab-navigation__contents">
+        <div class="c-tab-navigation__tab-panel is-show" data-content="01">
+            {% for contents in contents_list %}
+            <div class="p-contents-list__column ">
+                <article class="c-post-card">
+                    <div class="c-post-card__top">
+                        <div class="c-post-card__information-inner">
+                            <span class="c-category-tag c-category-tag__green">{{ contents.category }}</span>
+                            <!--                            <span class="c-post-card__rank">会員種別：テキスト？</span>-->
+                            <time datetime="" class="c-post-card__date">{{ contents.created_at|date:"Y/n/j"}}
+                            </time>
+                        </div>
+                        <h3 class="c-post-card__title">
+                            <a href="{% url 'contents_detail' pk=contents.id %}"
+                               class="c-post-card__title-link">
+                                {{ contents.title }}
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="c-post-card__bottom">
+                        <div class="c-post-card__tag-container">
+                            {% for tags in contents.tags.all %}
+                            <span class="c-post-card__category-tag">{{ tags.name }}</span>
+                            {% endfor %}
+                        </div>
+                        <a href="{% url 'contents_detail' pk=contents.id %}"
+                           class="c-post-card__link">詳しく読む</a>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+            <div class="p-contents-list__button-inner">
+                <a href="{% url 'contents_list' %}" class="c-primary-button">もっと見る</a>
+            </div>
+        </div>
+        <div class="c-tab-navigation__tab-panel is-show" data-content="02">
+            {% for faq in faq_list %}
+            <div class="p-contents-list__column ">
+                <article class="c-post-card">
+                    <div class="c-post-card__top">
+                        <span class="c-category-tag  c-category-tag__answer-primary">{{ faq.category.name }}</span>
+<!--                        <span class="c-post-card__rank">会員種別：テキスト？</span>-->
+                        <time datetime="" class="c-post-card__date">{{ faq.created_at|date:'Y/n/j' }}</time>
+                    </div>
+                    <div class="c-post-card__middle">
+                        <h3 class="c-post-card__title">
+                            <a href="{% url 'faq_detail' pk=faq.id %}" class="c-post-card__title-link">
+                                {{ faq.question }}
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="c-post-card__bottom">
+                        <div class="c-post-card__tag-container">
+                            {% for tags in object.tags.all %}
+                            <span class="c-post-card__category-tag">#{{ tags.name }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="c-post-card__infomation-inner">
+                            <a href="{% url 'faq_detail' pk=faq.id %}" class="c-post-card__link">回答を読む</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+            <div class="p-contents-list__button-inner">
+                <a href="{% url 'faq_list' %}" class="c-primary-button">もっと見る</a>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}

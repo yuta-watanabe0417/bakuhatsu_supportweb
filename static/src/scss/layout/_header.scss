@@ -40,6 +40,7 @@
     align-items: center;
     margin-right: 26px;
     text-align: center;
+    margin-top: 22px;
 
     &:nth-last-child(2) {
       margin-right: 0;
@@ -55,8 +56,20 @@
     font-weight: 300;
     line-height: 1.2;
     color: var.$base-text-color;
+    position: relative;
 
     @include var.font-size(18);
+
+    &::before{
+      content: attr(data-english-title);
+      font-weight: 400;
+      color: var.$base-text-color;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      @include var.font-size(14);
+    }
   }
 
   .c-button {

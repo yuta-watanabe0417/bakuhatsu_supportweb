@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %}質問リクエスト{% endblock %}
+{% block breadcrumb %}
+<li class="l-breadcrumb__item">
+    <a href="{% url 'index' %}" class="l-breadcrumb__link">HOME</a>
+</li>
+<li class="l-breadcrumb__item">
+    お問い合わせ
+</li>
+{% endblock %}
+{% block content %}
+<section class="p-faq-request">
+    <div class="p-faq-request__wrapper l-wrapper">
+        <h2 class="c-section-title" data-english-title="FAQ REQUEST">
+            お問い合わせ
+        </h2>
+        <p class="c-section-title__subtext">
+            お問い合わせ
+        </p>
+        <div class="p-faq-request__container">
+            <div class="p-faq-request__title-inner">
+                <h3 class="p-faq-request__title">お問い合わせ</h3>
+            </div>
+            <div class="p-faq-request__form-inner">
+                <form action="{% url 'contact_form' %}" method="POST" class="p-faq-request-form">
+                    {% csrf_token %}
+                    <div class="p-faq-request-form__items">
+                        <label for="" class="p-faq-request-form__text">氏名</label>
+                        {{ form.name|add_class:'p-faq-request-form__input' }}
+                    </div>
+                    <div class="p-faq-request-form__items">
+                        <label for="" class="p-faq-request-form__text">メールアドレス</label>
+                        {{ form.email|add_class:'p-faq-request-form__input' }}
+                    </div>
+                    <div class="p-faq-request-form__items">
+                        <label for="" class="p-faq-request-form__text">件名</label>
+                        {{ form.title|add_class:'p-faq-request-form__input' }}
+                    </div>
+                    <div class="p-faq-request-form__items">
+                        <label for="" class="p-faq-request-form__text">リクエスト内容</label>
+                        {{ form.message|add_class:'p-faq-request-form__input-textarea' }}
+                    </div>
+                    <div class="p-faq-request-form__items">
+                        <button type="submit" class="c-primary-button--fill">
+                            リクエストを送信する
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

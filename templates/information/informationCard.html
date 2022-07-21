@@ -10,7 +10,7 @@
                     <div class="c-post-card__top">
                         <div class="c-post-card__information-inner">
                             <span class="c-category-tag c-category-tag__primary" >{{ information.category }}</span>
-                            <time datetime="" class="c-post-card__date">{{ information.created_at|date:"Y/n/j" }}</time>
+                            <time datetime="{{ information.created_at|date:"Y-n-j" }}" class="c-post-card__date">{{ information.created_at|date:"Y/n/j" }}</time>
                         </div>
                         <h3 class="c-post-card__title">
                             <a href="{% url 'information_detail' pk=information.id %}" class="c-post-card__title-link">
@@ -19,7 +19,7 @@
                         </h3>
                     </div>
                     <div class="c-post-card__bottom">
-                        <a href="{% url 'information_list' %}" class="c-post-card__link">詳しく読む</a>
+                        <a href="{% url 'information_detail' pk=information.id %}" class="c-post-card__link">詳しく読む</a>
                     </div>
                 </article>
             </div>

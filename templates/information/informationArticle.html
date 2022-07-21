@@ -6,11 +6,11 @@
       <div class="c-contents-detail__wrapper">
         <div class="c-contents-detail__top">
           <div class="c-contents-detail__data-container">
-            <time datetime="" class="c-contents-detail__date">{{ object.created_at|date:'Y/n/j' }}</time>
+            <time datetime="{{ object.created_at|date:'Y-n-j' }}" class="c-contents-detail__date">{{ object.created_at|date:'Y/n/j' }}</time>
             <div class="c-contents-detail__category-inner">
-                            {% for tag in object.tags.all %}
-                            <span class="c-information-article__category-tag">#{{ tag.name }}</span>
-                            {% endfor %}
+              {% for tag in object.tags.all %}
+                  <span class="c-information-article__category-tag">#{{ tag.name }}</span>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -22,10 +22,8 @@
           </div>
         </div>
         <div class="c-contents-detail__bottom">
-          <div class="c-contents-detail__contents">
-            <p>
+          <div class="c-contents-detail__contents">    
               {{ object.content | markdown | safe }}
-            </p>
           </div>
         </div>
       </div>

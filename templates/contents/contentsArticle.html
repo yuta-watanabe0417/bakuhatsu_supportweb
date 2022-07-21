@@ -4,7 +4,9 @@
   <div class="c-contents-detail__wrapper">
     <div class="c-contents-detail__top">
       <div class="c-contents-detail__data-container">
-<!--        <span class="c-contents-detail__rank">会員種別：テキスト？</span>-->
+				{% comment %}
+       <span class="c-contents-detail__rank">会員種別：テキスト？</span>
+			 {% endcomment %}
         <time datetime="" class="c-contents-detail__date">{{ content.created_at|date:'Y/n/j' }}</time>
         <div class="c-contents-detail__category-inner">
             {% for tags in object.tags.all %}
@@ -14,17 +16,13 @@
       </div>
     </div>
     <div class="c-contents-detail__middle">
-      <div class="c-faq-detail"></div>
       <h2 class="c-contents-detail__title">
         {{content.title}}
       </h2>
     </div>
     <div class="c-contents-detail__bottom">
-      <div class="c-faq-detail"></div>
       <div class="c-contents-detail__contents">
-        <p>
           {{content.content |markdown | safe}}
-        </p>
       </div>
     </div>
   </div>

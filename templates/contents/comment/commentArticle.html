@@ -22,7 +22,7 @@
               </picture>
               <div class="c-comments-card__icon-right">
                 <p class="c-comments-card__name">{{ thread.name }}</p>
-                <time class="c-comments-card__date" datetime="2022-05-06">
+                <time class="c-comments-card__date" datetime="{{ thread.created_at|date:'Y-n-j' }}">
                     {{ thread.created_at|date:'Y/n/j' }}
                 </time>
               </div>
@@ -64,7 +64,7 @@
                 </picture>
                 <div class="c-comments-card__icon-right">
                   <p class="c-comments-card__name">{{ comment.name}}</p>
-                  <time class="c-comments-card__date" datetime="{{ comment.created_at|date:'Y/n/j' }}">
+                  <time class="c-comments-card__date" datetime="{{ comment.created_at|date:'Y-n-j' }}">
                       {{ comment.created_at|date:'Y/n/j' }}
                   </time>
                 </div>

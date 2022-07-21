@@ -45,10 +45,12 @@
                 会社ホームページ
               </a>
             </li>
-            <!--            TODO 初回リリースでは保留-->
-            <!--            <li class="l-header-nav__item">-->
-            <!--              <a class="c-button">ログイン</a>-->
-            <!--            </li>-->
+						{% comment %}
+						TODO 初回リリースでは保留
+            <li class="l-header-nav__item">
+              <a class="c-button">ログイン</a>
+            </li>
+						{% endcomment%}
           </ul>
         </nav>
       </div>
@@ -62,9 +64,7 @@
       {% if "article" not in request.get_full_path %}
       <section class="l-page-first">
         <div class="l-page-first__wrapper l-wrapper">
-          <h1 class="c-page-title" data-english-title="TOP">
-            {% block page-title %}{% endblock %}
-          </h1>
+					{% block page-title %}{% endblock %}
           <p class="c-page-title__sub">
             {% block page-subtitle %}{% endblock %}
           </p>

@@ -18,8 +18,10 @@
         <div class="c-post-card__top">
             <div class="c-post-card__information-inner">
                 <span class="c-category-tag c-category-tag__green">{{ contents.category }}</span>
-                <!--                            <span class="c-post-card__rank">会員種別：テキスト？</span>-->
-                <time datetime="" class="c-post-card__date">{{ contents.created_at|date:"Y/n/j"}}
+								{% comment%}
+								<span class="c-post-card__rank">会員種別：テキスト？</span>
+								{% endcomment%}
+                <time datetime="{{ contents.created_at|date:"Y-n-j"}}" class="c-post-card__date">{{ contents.created_at|date:"Y/n/j"}}
                 </time>
             </div>
             <h3 class="c-post-card__title">

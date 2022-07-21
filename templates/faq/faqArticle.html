@@ -7,12 +7,14 @@
       <div class="c-contents-detail__wrapper">
         <div class="c-contents-detail__top">
           <div class="c-contents-detail__data-container">
-<!--            <span class="c-contents-detail__rank">会員種別：テキスト？</span>-->
-            <time datetime="" class="c-contents-detail__date">{{ object.created_at|date:'Y/n/j' }}</time>
+						{% comment %}
+           <span class="c-contents-detail__rank">会員種別：テキスト？</span>
+					 {% endcomment %}
+            <time datetime="{{ object.created_at|date:'Y-n-j' }}" class="c-contents-detail__date">{{ object.created_at|date:'Y/n/j' }}</time>
             <div class="c-contents-detail__category-inner">
-                            {% for tag in object.tags.all %}
-                            <span class="c-faq-article__category-tag">{{ tag.name }}</span>
-                            {% endfor %}
+              {% for tag in object.tags.all %}
+                <span class="c-contents-detail__category-tag">{{ tag.name }}</span>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -34,14 +36,13 @@
               <span class="c-faq-detail__subtitle c-faq-detail__subtitle-answer">回答</span>
             </p>
             <div class="c-faq-detail__answer">
-              <p>
                 {{ object.answer | markdown | safe }}
-              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="c-faq-detail__like-container">
+	{% comment %} 
+	 <div class="c-faq-detail__like-container">
         <div class="c-faq-detail__button-inner">
           <button class="c-faq-detail__button">
             <span class="c-faq-detail__like-number">113</span>
@@ -61,6 +62,7 @@
           <span class="c-faq-detail__button-text">ブックマークする</span>
         </div>
       </div>
+	{% endcomment %}
     </article>
   </div>
 </section>

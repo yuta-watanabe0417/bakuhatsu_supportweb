@@ -2,7 +2,7 @@
 
 ## データベースの作成
 
-mysqlにログインして以下のコマンドを実行する
+mysql にログインして以下のコマンドを実行する
 
 ```
 create database bakuhatsu_support_web
@@ -21,6 +21,7 @@ python manage.py migrate
 ルートディレクトリで以下のコマンドを実行する
 
 ```
+python manage.py loaddata accounts/fixtures/posts-data.json
 python manage.py loaddata contents/fixtures/posts-data.json
 python manage.py loaddata faq/fixtures/posts-data.json
 python manage.py loaddata contant/fixtures/posts-data.json

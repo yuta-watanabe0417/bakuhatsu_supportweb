@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View, ListView
+from markdown import markdown
+
 from contents.models import Article as Contents
 from faq.models import Article as Faq
 from information.models import Article as Information
@@ -25,4 +27,7 @@ class TopPage(ListView):
 
 class PrivacyPolicy(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'privacy-policy.html')
+        with open('templates/privacy_policy_supportweb.md') as file:
+            s = file.read()
+        s_to_html = markdown(s)
+        return render(request, 'privacy-policy.html', context={'contents': s_to_html})

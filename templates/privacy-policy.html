@@ -1,23 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load markdown_extras %}
 {% block title %}プライバシーポリシー{% endblock %}
-{% block readscript %}<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>{% endblock %}
 {% block breadcrumb %}
 <li class="l-breadcrumb__item">
   <a href="" class="l-breadcrumb__link">HOME</a>
 </li>
 {% endblock %}
 {% block page-title %}
-<h1 class="c-page-title" data-english-title="TOP">プライバシーポリシー</h1>
+<h1 class="c-page-title" data-english-title="PRIVACY POLICY">プライバシーポリシー</h1>
 {% endblock %}
 {% block page-subtitle %}プライバシーポリシー{% endblock %}
 {% block content %}
-<section class="p-contents-list">
-    <div class="p-contents-list__wrapper l-wrapper">
-        <div class="p-contents-list__container l-container">
-			<script>marked.parse( {% include 'privacy_policy_supportweb.md' %} )</script>
+<article class="c-contents-detail">
+  <div class="c-contents-detail__wrapper">
+        <div class="p-privacy-policy">
+           {{ contents | safe }}
         </div>
-    </div>
-</section>
+  </div>
+</article>
 {% endblock %}

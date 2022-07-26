@@ -1526,7 +1526,7 @@ p:lang(en) {
   font-weight: 300;
   line-height: 1.7;
 }
-.p-privacy-policy ul {
+.p-privacy-policy ol {
   padding: 0 1rem;
   margin-top: 1rem;
 }

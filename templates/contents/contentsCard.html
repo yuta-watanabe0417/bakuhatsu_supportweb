@@ -1,0 +1,47 @@
+{% extends 'section.html' %}
+{% load static %}
+
+{% block english_title %}
+{{ section_title_contents.english_title }}
+{% endblock %}
+{% block section_title %}
+{{ section_title_contents.title }}
+{% endblock %}
+{% block section_title_subtext %}
+{{ section_title_contents.sub_text }}
+{% endblock %}
+
+{% block card_list %}
+{% for contents in contents_list %}
+<div class="p-contents-list__column ">
+    <article class="c-post-card">
+        <div class="c-post-card__top">
+            <div class="c-post-card__information-inner">
+                <span class="c-category-tag c-category-tag__green">{{ contents.category }}</span>
+								{% comment%}
+								<span class="c-post-card__rank">会員種別：テキスト？</span>
+								{% endcomment%}
+                <time datetime="{{ contents.created_at|date:"Y-n-j"}}" class="c-post-card__date">{{ contents.created_at|date:"Y/n/j"}}
+                </time>
+            </div>
+            <h3 class="c-post-card__title">
+                <a href="{% url 'contents_detail' pk=contents.id %}"
+                   class="c-post-card__title-link">
+                    {{ contents.title }}
+                </a>
+            </h3>
+        </div>
+        <div class="c-post-card__bottom">
+            <div class="c-post-card__tag-container">
+                {% for tags in contents.tags.all %}
+                <span class="c-post-card__category-tag">{{ tags.name }}</span>
+                {% endfor %}
+            </div>
+            <a href="{% url 'contents_detail' pk=contents.id %}"
+               class="c-post-card__link">詳しく読む</a>
+        </div>
+    </article>
+</div>
+{% endfor %}
+{% include 'archive-navigation.html' %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}プライバシーポリシー{% endblock %}
+{% block breadcrumb %}
+<li class="l-breadcrumb__item">
+  <a href="" class="l-breadcrumb__link">HOME</a>
+</li>
+{% endblock %}
+{% block page-title %}
+<h1 class="c-page-title" data-english-title="PRIVACY POLICY">プライバシーポリシー</h1>
+{% endblock %}
+{% block page-subtitle %}プライバシーポリシー{% endblock %}
+{% block content %}
+<article class="c-contents-detail">
+  <div class="c-contents-detail__wrapper">
+        <div class="p-privacy-policy">
+           {{ contents | safe }}
+        </div>
+  </div>
+</article>
+{% endblock %}

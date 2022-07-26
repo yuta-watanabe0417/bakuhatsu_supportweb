@@ -1,0 +1,29 @@
+{% load static %}
+{% load markdown_extras %}
+<article class="c-contents-detail">
+  <div class="c-contents-detail__wrapper">
+    <div class="c-contents-detail__top">
+      <div class="c-contents-detail__data-container">
+				{% comment %}
+       <span class="c-contents-detail__rank">会員種別：テキスト？</span>
+			 {% endcomment %}
+        <time datetime="" class="c-contents-detail__date">{{ content.created_at|date:'Y/n/j' }}</time>
+        <div class="c-contents-detail__category-inner">
+            {% for tags in object.tags.all %}
+          <span class="c-contents-detail__category-tag">#{{ tags.name }}</span>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="c-contents-detail__middle">
+      <h2 class="c-contents-detail__title">
+        {{content.title}}
+      </h2>
+    </div>
+    <div class="c-contents-detail__bottom">
+      <div class="c-contents-detail__contents">
+          {{content.content |markdown | safe}}
+      </div>
+    </div>
+  </div>
+</article>

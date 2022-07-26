@@ -1,0 +1,74 @@
+@use '../../global/' as var;
+
+.c-category-card {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 16px;
+  background: var.$white;
+  border: 1px solid #d9e7ff;
+  border-radius: 19px;
+
+  &:last-child::after {
+    margin-bottom: 0;
+    content: '';
+  }
+
+  &__wrapper {
+    max-width: 810px;
+    margin: 0 auto;
+  }
+
+  &__firstlayer {}
+
+  &__title {
+    @include var.font-size(20);
+
+    font-weight: 700;
+    border-bottom: solid #000;
+    border-image: var.$cotegory-border-color;
+    border-image-slice: 1;
+    border-image-width: 0 0 1px 0;
+  }
+
+  &__firstlayer-link {
+    line-height: 1.5;
+
+    @include var.font-size(21);
+
+    color: var.$primary-color;
+  }
+
+  &__secondlayer {
+    margin-right: 14px;
+    font-weight: 300;
+    color: var.$base-text-color;
+
+    @include var.font-size(16);
+  }
+
+  &__container {
+    margin-top: 16px;
+  }
+
+  &__item {
+    display: inline-block;
+    width: auto;
+    margin-top: 14px;
+    margin-left: 14px;
+
+    &::after {
+      margin-left: 14px;
+      color: var.$primary-color;
+      content: '>';
+    }
+
+    &:last-child::after {
+      margin-left: 0;
+      content: '';
+    }
+  }
+
+  &__secondlayer-link {
+    @include var.font-size(17);
+  }
+}

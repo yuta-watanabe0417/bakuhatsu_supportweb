@@ -1,0 +1,111 @@
+{% load static %}
+{% load markdown_extras %}
+{% load widget_tweaks %}
+<section class="p-contents-detail">
+  <div class="p-contents-detail__wrapper l-wrapper">
+    <article class="c-contents-detail">
+      <div class="c-contents-detail__wrapper">
+        <div class="c-contents-detail__top">
+          <div class="c-contents-detail__data-container">
+						{% comment %}
+           <span class="c-contents-detail__rank">会員種別：テキスト？</span>
+					 {% endcomment %}
+            <time datetime="{{ object.created_at|date:'Y-n-j' }}" class="c-contents-detail__date">{{ object.created_at|date:'Y/n/j' }}</time>
+            <div class="c-contents-detail__category-inner">
+              {% for tag in object.tags.all %}
+                <span class="c-contents-detail__category-tag">{{ tag.name }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="c-contents-detail__middle">
+          <div class="c-faq-detail">
+            <p class="c-faq-detail__subtitle-question-inner" data-english-title="Question">
+              <span class="c-faq-detail__subtitle c-faq-detail__subtitle-question">質問</span>
+            </p>
+            <div class="c-faq-detail__title-inner">
+              <h2 class="c-faq-detail__title">
+                {{ object.question }}
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="c-contents-detail__bottom">
+          <div class="c-faq-detail">
+            <p class="c-faq-detail__subtitle-answer-inner" data-english-title="Answer">
+              <span class="c-faq-detail__subtitle c-faq-detail__subtitle-answer">回答</span>
+            </p>
+            <div class="c-faq-detail__answer">
+                {{ object.answer | markdown | safe }}
+            </div>
+          </div>
+        </div>
+      </div>
+	{% comment %} 
+	 <div class="c-faq-detail__like-container">
+        <div class="c-faq-detail__button-inner">
+          <button class="c-faq-detail__button">
+            <span class="c-faq-detail__like-number">113</span>
+          </button>
+          <span class="c-faq-detail__button-text">参考になった</span>
+        </div>
+        <div class="c-faq-detail__button-inner">
+          <button class="c-faq-detail__button">
+            <span class="c-faq-detail__good-icon"></span>
+          </button>
+          <span class="c-faq-detail__button-text">いいねする</span>
+        </div>
+        <div class="c-faq-detail__button-inner">
+          <button class="c-faq-detail__button">
+            <span class="c-faq-detail__bookmark-icon"></span>
+          </button>
+          <span class="c-faq-detail__button-text">ブックマークする</span>
+        </div>
+      </div>
+	{% endcomment %}
+    </article>
+  </div>
+</section>
+<section class="p-faq-request">
+  <div class="p-faq-request__wrapper l-wrapper">
+    <h2 class="c-section-title" data-english-title="FAQ REQUEST">
+      質問リクエスト
+    </h2>
+    <p class="c-section-title__subtext">
+      テキストが入ります。テキストが入ります。テキストが入ります。
+    </p>
+    <div class="p-faq-request__container">
+      <div class="p-faq-request__title-inner">
+        <h3 class="p-faq-request__title">\質問リクエストを投稿しよう/</h3>
+      </div>
+      <div class="p-faq-request__form-inner">
+        <form action="{% url 'request_create' %}" method="POST" class="c-faq-request-form">
+          {% csrf_token %}
+          <div class="c-faq-request-form__items">
+            <label for="" class="c-faq-request-form__text">
+              氏名
+            </label>
+            {{ form.name | add_class:"c-faq-request-form__input"}}
+          </div>
+          <div class="c-faq-request-form__items">
+            <label for="" class="c-faq-request-form__text">
+              件名
+            </label>
+            {{ form.title | add_class:"c-faq-request-form__input"}}
+          </div>
+          <div class="c-faq-request-form__items">
+            <label for="" class="c-faq-request-form__text">
+              リクエスト内容
+            </label>
+            {{ form.message | add_class:"c-faq-request-form__input"}}
+          </div>
+          <div class="c-faq-request-form__items">
+            <button type="submit" class="c-primary-button--fill">
+              リクエストを送信する
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
